@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.data = void 0;
 const animal = [
     {
         question: 'Чем утконос отличается от других млекопитающих? ',
@@ -1361,7 +1358,7 @@ const nature = [
         correct: '223',
     },
 ];
-exports.data = {
+export const data = {
     quizzes: {
         animal: {
             id: 'animal',
@@ -1390,4 +1387,4 @@ exports.data = {
         },
     },
 };
-exports.default = exports.data;
+export default data;
