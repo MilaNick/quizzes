@@ -10,3 +10,10 @@ export type TState = {
 }
 
 export type TQuizzes = typeof data.quizzes
+export type TQuiz = {
+    question: string
+    answers: {
+        id: string
+        value: string
+    }
+}

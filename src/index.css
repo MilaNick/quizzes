@@ -1,3 +1,7 @@
+/*==============var============*/
+
+
+/*============total============*/
 body {
     width: 100vw;
     height: 100vh;
@@ -13,13 +17,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.active {
-    display: block;
-}
-
-.hide {
-    visibility: hidden;
-}
+/*=============================*/
 
 .container {
     position: relative;
@@ -31,25 +29,7 @@ h2 {
     margin: 0 auto;
  }
 
-.page {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top:0;
-    left: 0;
-
-}
-.wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    /*background-image: url('./assets/images/img20.jpg');*/
-    background: #87d0e5ff;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/*==============img============*/
 .wrap-img {
     display: flex;
     justify-content: center;
@@ -57,51 +37,58 @@ h2 {
     margin: 0.5em;
 }
 
-.quiz {
+.title-img {
     width: 100%;
     object-fit: cover;
 }
 
-.wrap1 {
+/*============pages============*/
+.page {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.page-home {
+    background-image: url('./assets/images/img20.jpg');
+}
+
+.bg-animal {
     background-image: url('./assets/images/img8.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.wrap2 {
+.bg-tales {
     background-image: url('./assets/images/img2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.wrap3 {
+.bg-cartoons {
     background-image: url('./assets/images/img6.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.wrap4 {
+.bg-mathematics {
     background-image: url('./assets/images/img10.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.wrap5 {
+.bg-nature {
     background-image: url('./assets/images/img15.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.result {
+.page-result {
     background-image: url('./assets/images/img16.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+.output {
+
 }
 
 .question-wrap {
@@ -125,7 +112,7 @@ h2 {
     text-align: center;
 }
 
-/*---------------BTN-----------------*/
+/*===========buttons===========*/
 .btn {
     min-width: 45vw;
     width: 45vw;
@@ -176,7 +163,8 @@ h2 {
 .btn-incorrect{
     background-image: linear-gradient(to right, #f3053c 0%, #ffff1c  51%, #f30b42 100%);
 }
-/*--------------Animation---------------*/
+
+/*==========Animation==========*/
 .fade-in {
     animation: fadeIn ease 0.5s;
     -webkit-animation: fadeIn ease 0.5s;
@@ -244,3 +232,10 @@ h2 {
     100% {opacity:0;}
 }
 
+/*=============================*/
+/*.active {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*}*/

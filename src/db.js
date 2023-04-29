@@ -270,7 +270,7 @@ const animal = [
         correct: '043',
     },
 ];
-const fairyTales = [
+const tales = [
     {
         question: 'Самое популярное число в русских сказках?',
         answers: [
@@ -1364,26 +1364,31 @@ export const data = {
             id: 'animal',
             title: 'Про животных',
             tasks: animal,
+            bgSrc: './assets/images/img8.jpg',
         },
-        fairyTales: {
-            id: 'fairyTales',
+        tales: {
+            id: 'tales',
             title: 'Сказки',
-            tasks: fairyTales,
+            tasks: tales,
+            bgSrc: './assets/images/img2.jpg',
         },
         cartoons: {
             id: 'cartoons',
             title: 'Мультфильмы',
-            tasks: cartoons
+            tasks: cartoons,
+            bgSrc: './assets/images/img6.jpg',
         },
         mathematics: {
             id: 'mathematics',
             title: 'Математика',
-            tasks: mathematics
+            tasks: mathematics,
+            bgSrc: './assets/images/img10.jpg',
         },
         nature: {
             id: 'nature',
             title: 'Природа',
-            tasks: nature
+            tasks: nature,
+            bgSrc: './assets/images/img15.jpg',
         },
     },
 };
