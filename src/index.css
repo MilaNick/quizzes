@@ -1,5 +1,15 @@
 /*==============var============*/
+.btn-correct {
+    background: greenyellow !important;
+}
 
+.btn-incorrect {
+    background: red !important;
+}
+
+.btn-disabled {
+    pointer-events: none;
+}
 
 /*============total============*/
 body {
@@ -27,7 +37,7 @@ h2 {
     width: 100%;
     height: 100%;
     margin: 0 auto;
- }
+}
 
 /*==============img============*/
 .wrap-img {
@@ -104,12 +114,27 @@ h2 {
 
 .question {
     width: 70vw;
-    padding: 2em;
+    padding: 1em;
     color: #931a75;
     text-transform: uppercase;
-    font-size: 4.5vw;
+    font-size: 3vw;
     font-weight: 700;
     text-align: center;
+}
+
+.greyProgress {
+    width: 78vw;
+    background-color: #ddd;
+    border-radius: 15px;
+}
+
+.greenBar {
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
 }
 
 /*===========buttons===========*/
@@ -149,7 +174,7 @@ h2 {
     opacity: 0.5;
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
-     transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .btn:enabled {

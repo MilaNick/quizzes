@@ -1,10 +1,12 @@
+import {TDb} from "./interface";
+
 const animal = [
     {
         question: 'Чем утконос отличается от других млекопитающих? ',
         answers: [
             {
                 id: '001',
-                value: 'он не пьет воду',
+                value: 'он не пьет воду', // todo: title
             },
             {
                 id: '002',
@@ -1363,7 +1365,7 @@ const nature = [
     },
 ]
 
-export const data = {
+export const data: TDb = {
     quizzes: {
         animal: {
             id: 'animal',

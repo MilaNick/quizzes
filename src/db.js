@@ -4,7 +4,7 @@ const animal = [
         answers: [
             {
                 id: '001',
-                value: 'он не пьет воду',
+                value: 'он не пьет воду', // todo: title
             },
             {
                 id: '002',
