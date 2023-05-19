@@ -116,11 +116,11 @@ const animal = [
             },
             {
                 id: '020',
-                value: '',
+                value: 'Пингвин',
             },
             {
                 id: '021',
-                value: '',
+                value: 'Цесарка',
             }
         ],
         correct: '019'

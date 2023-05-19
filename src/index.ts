@@ -6,7 +6,8 @@ const state: TState = {
     quizId: null,
     clickedAnswerId: null,
     taskIndex: null,
-    correctAnswerCount: null
+    correctAnswerCount: null,
+    totalCorrectAnswerCount: null
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const addHomeToSection = (section: HTMLElement, quizzes: TQuiz[]) => {
         const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('btns-wrap');
         quizzes.forEach(quiz => {
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-grad');
@@ -38,19 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         section.append(buttonsContainer);
     }
-// TODO вопрос последний - нет?
-// TODO картинки bg, сделать и рендерить через js, а не стили
-// TODO стили кнопок вопросов и кнопки далее
-// TODO про животных два ответа не записаны
-// TODO реализовать result
-//
+
     const addTaskToSection = (section: HTMLElement, task: TTask, currentIndex: number, totalCount: number) => {
         const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('wrap-btns');
+        console.log('task.answers>>>', task.answers)
         task.answers.forEach(answer => {
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-grad');
             button.innerHTML = answer.value;
-
             if (state.clickedAnswerId) {
                 button.classList.add('btn-disabled');
                 const isCorrectAnswer = task.correct === answer.id;
@@ -75,8 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             buttonsContainer.append(button);
         })
-        // const width: number = (currentIndex + 1) * 100);
-        // console.log('((currentIndex + 1) * 100)', width)
         section.innerHTML = `
             <div class="question-wrap">
                 <div class="question">Вопрос ${currentIndex}<br/> ${task.question}</div>
@@ -88,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         section.append(buttonsContainer);
 
         const buttonNext = document.createElement('button');
-        buttonNext.classList.add('btn', 'btn-grad');
+        buttonNext.classList.add('btn', 'btn-next');
         buttonNext.innerHTML = 'Далее';
         if (state.clickedAnswerId) {
             buttonNext.addEventListener('click', () => {
@@ -98,9 +94,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 state.taskIndex = state.taskIndex + 1;
                 state.clickedAnswerId = null;
                 renderPage();
-                // if () { // todo: добавить проверку на то, что это не последний вопрос
-                // если это последний вопрос то приведи весь state к корректному значению
-                // }
+                if (state.taskIndex === totalCount - 1) {
+
+                    const totalCorrectAnswer = localStorage.getItem('totalCorrect');
+                    if (!totalCorrectAnswer && state.correctAnswerCount) {
+                        localStorage.setItem('totalCorrect', String(state.correctAnswerCount))
+                    } else {
+                        // @ts-ignore
+                        const totalCorrect = parseInt(totalCorrectAnswer) + state.correctAnswerCount
+                        localStorage.setItem('totalCorrect', String(totalCorrect))
+                    }
+                    // @ts-ignore
+                    state.totalCorrectAnswerCount = parseInt(localStorage.getItem('totalCorrect'))
+                    state.pageType = 'result'
+                    renderPage();
+                }
             });
         } else {
             buttonNext.setAttribute('disabled', 'disabled');
@@ -108,14 +116,25 @@ document.addEventListener("DOMContentLoaded", () => {
         section.append(buttonNext)
     }
 
-    const addResultToSection = (section: HTMLElement, quizName: string, totalCount: number, correctCount: number) => {
-        return `
-            <h2>result</h2>
-            <div class="output">Результаты</div>
-            <div>всего вопросов: ${totalCount}</div>
-            <div>правильных ответов: ${correctCount}</div>
-            <div>название квиза: ${quizName}</div>
+    const addResultToSection = (section: HTMLElement, quizName: string, totalCount: number, correctCount: number, totalCorrectCount: null | number) => {
+        const button = document.createElement('button');
+
+        section.innerHTML = `
+            <div class="output-wrap">
+                <div class="output">Результаты</div>
+                <div>всего вопросов: ${totalCount}</div>
+                <div>правильных ответов: ${correctCount}</div>
+                <div>название квиза: ${quizName}</div>
+                <div>всего баллов: ${totalCorrectCount}</div>
+            </div>
         `
+        button.classList.add('btn', 'btn-grad');
+        button.innerHTML = 'На главную';
+        button.addEventListener('click', () => {
+            state.pageType = 'home';
+            renderPage();
+        })
+        section.append(button);
     }
 
     const renderPage = () => {
@@ -149,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     throw new Error('Рендер result: нет quizId или correctAnswerCount');
                 }
                 const quiz = data.quizzes[state.quizId];
-                section.innerHTML = addResultToSection(section, quiz.title, quiz.tasks.length, state.correctAnswerCount);
+                addResultToSection(section, quiz.title, quiz.tasks.length, state.correctAnswerCount, state.totalCorrectAnswerCount)
                 break;
             }
             default:
@@ -160,3 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderPage();
 });
+
+// TODO картинки bg, сделать и рендерить через js, а не стили
+// TODO реализовать ли карты подарки?
+// TODO добавить кнопку на главную
+// TODO добавить анимацию

@@ -6,6 +6,7 @@ export type TState = {
     clickedAnswerId: null | string,
     taskIndex: null | number
     correctAnswerCount: null | number
+    totalCorrectAnswerCount: null | number
 }
 
 export type TAnswer = {
