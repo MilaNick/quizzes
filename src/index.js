@@ -5,13 +5,13 @@ const state = {
     clickedAnswerId: null,
     taskIndex: null,
     correctAnswerCount: null,
-    totalCorrectAnswerCount: null
+    totalCorrectAnswerCount: Number(localStorage.getItem('totalCorrect'))
 };
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector('.container');
     // const objectKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>;
     // const quizIds = objectKeys(data.quizzes); // тождественно, но bad practice const keys1 = Object.keys(data.quizzes) as (keyof TQuizzes)[];
-    const addHomeToSection = (section, quizzes) => {
+    const addHomeToSection = (section, quizzes, totalCorrectAnswerCount) => {
         const buttonsContainer = document.createElement('div');
         buttonsContainer.classList.add('btns-wrap');
         quizzes.forEach(quiz => {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 state.quizId = quiz.id;
                 state.taskIndex = 0;
                 state.correctAnswerCount = 0;
-                renderPage(); // todo: написать свой объект, который будет вызвать render
+                renderPage();
             });
             buttonsContainer.append(button);
         });
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img class="title-img" src="src/assets/images/quiz_1.png" alt="quiz">
              </div>
              <h2>с 6 до 12 лет</h2>
+             <h2>всего баллов: ${totalCorrectAnswerCount}</h2>
         `;
         section.append(buttonsContainer);
     };
     const addTaskToSection = (section, task, currentIndex, totalCount) => {
         const buttonsContainer = document.createElement('div');
         buttonsContainer.classList.add('wrap-btns');
-        console.log('task.answers>>>', task.answers);
         task.answers.forEach(answer => {
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-grad');
@@ -139,11 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const quizzes = Object.values(data.quizzes);
         switch (state.pageType) {
             case 'home': {
-                addHomeToSection(section, quizzes);
+                addHomeToSection(section, quizzes, state.totalCorrectAnswerCount);
                 break;
             }
             case 'quiz': {
-                section.classList.add(`bg-${state.quizId}`); // todo: bg-${state.quizId}
+                section.classList.add(`bg-${state.quizId}`);
                 if (!state.quizId || state.taskIndex === null) {
                     throw new Error('Рендер quiz: нет quizId или taskIndex');
                 }
@@ -169,7 +169,3 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     renderPage();
 });
-// TODO картинки bg, сделать и рендерить через js, а не стили
-// TODO реализовать ли карты подарки?
-// TODO добавить кнопку на главную
-// TODO добавить анимацию

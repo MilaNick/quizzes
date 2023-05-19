@@ -1,7 +1,7 @@
 export type TKeysState = 'pageType' | 'quizId' | 'taskId' | 'correctAnswerCount'
 
 export type TState = {
-    pageType: 'home' | 'quiz' | 'result' // TODO: Аня должна показать как написать конкретный для любого типа state
+    pageType: 'home' | 'quiz' | 'result'
     quizId: null | TQuizId
     clickedAnswerId: null | string,
     taskIndex: null | number

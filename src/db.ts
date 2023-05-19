@@ -333,11 +333,11 @@ const tales = [
         answers: [
             {
                 id: '055',
-                value: 'Лавочка',
+                value: 'На лавочке',
             },
             {
                 id: '056',
-                value: 'Печка',
+                value: 'На печке',
             },
             {
                 id: '057',
