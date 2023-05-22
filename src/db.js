@@ -742,7 +742,7 @@ const cartoons = [
         correct: '121',
     },
     {
-        question: 'Имя у кота, который никак не может поймать маленького мышонка?',
+        question: 'Имя кота, который никак не может поймать маленького мышонка?',
         answers: [
             {
                 id: '124',
@@ -1362,7 +1362,7 @@ export const data = {
     quizzes: {
         animal: {
             id: 'animal',
-            title: 'Про животных',
+            title: 'Про\&nbspживотных',
             tasks: animal,
             bgSrc: './assets/images/img8.jpg',
         },

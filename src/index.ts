@@ -36,15 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="wrap-img">
                 <img class="title-img" src="src/assets/images/quiz_1.png" alt="quiz">
              </div>
-             <h2>с 6 до 12 лет</h2>
-             <h2>всего баллов: ${totalCorrectAnswerCount}</h2>
+             <h2 class="desc">с 6 до 12 лет</h2>
+             <h2 class="total-count">всего баллов: ${totalCorrectAnswerCount}</h2>
         `;
         section.append(buttonsContainer);
     }
 
     const addTaskToSection = (section: HTMLElement, task: TTask, currentIndex: number, totalCount: number) => {
         const buttonsContainer = document.createElement('div');
-        buttonsContainer.classList.add('wrap-btns');
+        buttonsContainer.classList.add('answers-wrap');
         task.answers.forEach(answer => {
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-grad');
@@ -121,14 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         section.innerHTML = `
             <div class="output-wrap">
-                <div class="output">Результаты</div>
-                <div>всего вопросов: ${totalCount}</div>
-                <div>правильных ответов: ${correctCount}</div>
-                <div>название квиза: ${quizName}</div>
-                <div>всего баллов: ${totalCorrectCount}</div>
+                <div class="output text-result">Результаты</div>
+                <div class="text-result">всего вопросов: ${totalCount}</div>
+                <div class="text-result">правильных ответов: ${correctCount}</div>
+                <div class="text-result">название квиза: ${quizName}</div>
+                <div class="text-result">всего баллов: ${totalCorrectCount}</div>
             </div>
         `
-        button.classList.add('btn', 'btn-grad');
+        button.classList.add('btn', 'btn-grad', 'btn-home');
         button.innerHTML = 'На главную';
         button.addEventListener('click', () => {
             state.pageType = 'home';
@@ -179,3 +179,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderPage();
 });
+
