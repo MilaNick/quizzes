@@ -273,11 +273,11 @@ h2 {
         grid-template-columns: repeat(12, 1fr);
     }
 
-    .page-home, .bg-tales, .bg-nature, .page-result {
+    .page-home, .bg-tales, .bg-nature {
         background-position: 25% 0;
     }
 
-    .bg-animal,.bg-cartoons, .bg-mathematics {
+    .bg-animal,.bg-cartoons, .bg-mathematics, .page-result {
         background-position: 100% 0;
     }
 
