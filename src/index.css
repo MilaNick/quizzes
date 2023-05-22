@@ -19,7 +19,7 @@ h2 {
 .btn {
     min-height: 10vh;
     padding: 10px 35px;
-    font-size: 2vw;
+    font-size: 2em;
     font-weight: 700;
     color: white;
     text-align: center;
@@ -222,7 +222,7 @@ h2 {
     }
 
     .question, .text-result {
-        font-size: 4vh;
+        font-size: 2em;
         line-height: 6vh;
     }
 
@@ -307,7 +307,7 @@ h2 {
     }
 
     .question, .text-result {
-        font-size: 6vw;
+        font-size: 3em;
         line-height: 9vw;
     }
 
@@ -330,7 +330,7 @@ h2 {
 
     .btn {
         min-height: 8vh;
-        font-size: 5vw;
+        font-size: 2em;
     }
 
     .btn-next {
