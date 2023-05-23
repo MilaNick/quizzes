@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // const objectKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>;
     // const quizIds = objectKeys(data.quizzes); // тождественно, но bad practice const keys1 = Object.keys(data.quizzes) as (keyof TQuizzes)[];
     const addHomeToSection = (section, quizzes, totalCorrectAnswerCount) => {
-        const buttonsContainer = document.createElement('div');
-        buttonsContainer.classList.add('btns-wrap');
+        const menuContainer = document.createElement('div');
+        menuContainer.classList.add('menu');
         quizzes.forEach(quiz => {
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-grad');
@@ -25,16 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 state.correctAnswerCount = 0;
                 renderPage();
             });
-            buttonsContainer.append(button);
+            menuContainer.append(button);
         });
         section.innerHTML = `
-            <div class="wrap-img">
-                <img class="title-img" src="src/assets/images/quiz_1.png" alt="quiz">
-             </div>
-             <h2 class="desc">с 6 до 12 лет</h2>
-             <h2 class="total-count">всего баллов: ${totalCorrectAnswerCount}</h2>
+            <div class="caption-wrap">
+                <img class="caption" src="src/assets/images/quiz.png" alt="quiz">
+            </div>
+            <div class="meta-wrap">
+                <div class="logo-wrap"><img class="logo" src="src/assets/images/logo.png" alt="logo"></div>
+                <div class="meta">
+                    <h2 class="desc">с 6 до 12 лет</h2>
+                    <h2 class="total-count">всего баллов: ${totalCorrectAnswerCount}</h2>
+                </div>
+            </div>
         `;
-        section.append(buttonsContainer);
+        section.append(menuContainer);
     };
     const addTaskToSection = (section, task, currentIndex, totalCount) => {
         const buttonsContainer = document.createElement('div');
@@ -169,12 +174,3 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     renderPage();
 });
-
-// TODO добавить музыку
-// TODO добавить кнопку обнулить
-// TODO добавить анимацию при 100% верных ответов
-// TODO добавить количество прохождений
-// TODO добавить картинку дня
-// TODO исправить верстку
-// TODO подключить sdk
-// TODO изменить localStorage на storage - ysdk.getStorage()).then(storage => storage.setItem('key', 'value'))
