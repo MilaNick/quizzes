@@ -175,3 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // TODO добавить анимацию при 100% верных ответов
 // TODO добавить количество прохождений
 // TODO добавить картинку дня
+// TODO исправить верстку
+// TODO подключить sdk
+// TODO изменить localStorage на storage - ysdk.getStorage()).then(storage => storage.setItem('key', 'value'))
