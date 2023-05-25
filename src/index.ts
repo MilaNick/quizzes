@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         section.innerHTML = `
             <div class="question-wrap">
-                <div class="question">Вопрос ${currentIndex}<br/> ${task.question}</div>
+                <div class="question"><span>Вопрос ${currentIndex}</span><span>${task.question}</span></div>
             </div>  
            <div class="greyProgress">
               <div class="greenBar" style="width: ${(currentIndex * 100) / totalCount}%">${(Math.round((currentIndex * 100) / totalCount))}%</div>
