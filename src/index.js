@@ -9,6 +9,8 @@ const state = {
 };
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector('.container');
+    // const containerForParticles = document.createElement('div')
+    // containerForParticles.setAttribute('id','container');
     // const objectKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>;
     // const quizIds = objectKeys(data.quizzes); // тождественно, но bad practice const keys1 = Object.keys(data.quizzes) as (keyof TQuizzes)[];
     const addHomeToSection = (section, quizzes, totalCorrectAnswerCount) => {
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         section.innerHTML = `
             <div class="question-wrap">
-                <div class="question"><span>Вопрос ${currentIndex}</span><span>${task.question}</span></div>
+                <div class="question"><span>Вопрос ${currentIndex + 1}</span><span>${task.question}</span></div>
             </div>  
            <div class="greyProgress">
               <div class="greenBar" style="width: ${(currentIndex * 100) / totalCount}%">${(Math.round((currentIndex * 100) / totalCount))}%</div>
