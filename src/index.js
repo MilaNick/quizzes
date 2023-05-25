@@ -119,21 +119,25 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const addResultToSection = (section, quizName, totalCount, correctCount, totalCorrectCount) => {
         const button = document.createElement('button');
+        const output = document.createElement('div');
         section.innerHTML = `
             <div class="output-wrap">
-                <div class="output text-result">Результаты</div>
+                <div class="text-result">Результаты</div>
                 <div class="text-result">всего вопросов: ${totalCount}</div>
                 <div class="text-result">правильных ответов: ${correctCount}</div>
                 <div class="text-result">название квиза: ${quizName}</div>
                 <div class="text-result">всего баллов: ${totalCorrectCount}</div>
             </div>
         `;
+        output.classList.add('output');
+        output.innerHTML = `${correctCount === totalCount || correctCount === totalCount - 1 ? ('<span>ты набрал ' + correctCount + ' из ' + totalCount + ' возможных.</br>Ты Аристотель наших дней</br>аплодирую тебе стоя!</span>') : ('<span>ты набрал ' + correctCount + ' из ' + totalCount + ' возможных.</br> Ты можешь лучше.</span>')}`;
         button.classList.add('btn', 'btn-grad', 'btn-home');
         button.innerHTML = 'На главную';
         button.addEventListener('click', () => {
             state.pageType = 'home';
             renderPage();
         });
+        section.append(output);
         section.append(button);
     };
     const renderPage = () => {
