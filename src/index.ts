@@ -98,11 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (state.taskIndex === null) {
                     throw new Error('state.taskIndex не может быть равен null');
                 }
-                state.taskIndex = state.taskIndex + 1;
-                state.clickedAnswerId = null;
-                renderPage();
                 if (state.taskIndex === totalCount - 1) {
-
                     const totalCorrectAnswer = localStorage.getItem('totalCorrect');
                     if (!totalCorrectAnswer && state.correctAnswerCount) {
                         localStorage.setItem('totalCorrect', String(state.correctAnswerCount))
@@ -111,9 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         const totalCorrect = parseInt(totalCorrectAnswer) + state.correctAnswerCount
                         localStorage.setItem('totalCorrect', String(totalCorrect))
                     }
+                    state.taskIndex = null;
+                    state.clickedAnswerId = null;
                     // @ts-ignore
                     state.totalCorrectAnswerCount = parseInt(localStorage.getItem('totalCorrect'))
                     state.pageType = 'result'
+                    renderPage();
+                } else {
+                    state.taskIndex = state.taskIndex + 1;
+                    state.clickedAnswerId = null;
                     renderPage();
                 }
             });
@@ -138,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `
             output.classList.add('output');
             output.innerHTML = `${
-                correctCount === totalCount || correctCount === totalCount - 1  ?  ('<span>ты набрал ' + correctCount + ' из ' + totalCount + ' возможных.</br>Ты Аристотель наших дней</br>аплодирую тебе стоя!</span>') : ('<span>ты набрал ' + correctCount + ' из ' + totalCount + ' возможных.</br> Ты можешь лучше.</span>')
+                correctCount === totalCount || correctCount === totalCount - 1  ?  ('<span>ты набрал ' + correctCount + '</br>из ' + totalCount + ' возможных.</br>Аристотель наших дней,</br>аплодирую тебе стоя!</span>') : ('<span>ты набрал ' + correctCount + '</br>из ' + totalCount + ' возможных.</br> Ты можешь лучше.</span>')
             }`
             button.classList.add('btn', 'btn-grad', 'btn-home');
             button.innerHTML = 'На главную';

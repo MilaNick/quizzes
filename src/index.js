@@ -92,9 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (state.taskIndex === null) {
                     throw new Error('state.taskIndex не может быть равен null');
                 }
-                state.taskIndex = state.taskIndex + 1;
-                state.clickedAnswerId = null;
-                renderPage();
                 if (state.taskIndex === totalCount - 1) {
                     const totalCorrectAnswer = localStorage.getItem('totalCorrect');
                     if (!totalCorrectAnswer && state.correctAnswerCount) {
@@ -105,9 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         const totalCorrect = parseInt(totalCorrectAnswer) + state.correctAnswerCount;
                         localStorage.setItem('totalCorrect', String(totalCorrect));
                     }
+                    state.taskIndex = null;
+                    state.clickedAnswerId = null;
                     // @ts-ignore
                     state.totalCorrectAnswerCount = parseInt(localStorage.getItem('totalCorrect'));
                     state.pageType = 'result';
+                    renderPage();
+                }
+                else {
+                    state.taskIndex = state.taskIndex + 1;
+                    state.clickedAnswerId = null;
                     renderPage();
                 }
             });
