@@ -2,271 +2,451 @@ import {TDb} from "./interface";
 
 const animal = [
     {
-        question: 'Чем утконос отличается от других млекопитающих? ',
+        question: {
+            en: 'How does the platypus differ from other mammals?',
+            ru: 'Чем утконос отличается от других млекопитающих? ',
+        },
         answers: [
             {
                 id: '001',
-                value: 'он не пьет воду',
+                value: {
+                    en: 'He doesn\'t drink water',
+                    ru: 'Он не пьет воду',
+                },
             },
             {
                 id: '002',
-                value: 'откладывает яйца',
+                value: {
+                    en: 'Lays eggs',
+                    ru: 'Откладывает яйца',
+                },
             },
             {
                 id: '003',
-                value: 'сам себе строит дом',
+                value: {
+                    en: 'He builds his own house',
+                    ru: 'Сам себе строит дом',
+                },
             }
         ],
         correct: '002',
     },
     {
-        question: 'Почему морские выдры держатся за руки?',
+        question: {
+            en: 'Why are sea otters hold hands?',
+            ru: 'Почему морские выдры держатся за руки?',
+        },
         answers: [
             {
                 id: '004',
-                value: 'Потому что дружат',
+                value: {
+                    en: 'Because they\'re friends',
+                    ru: 'Потому что дружат',
+                },
             },
             {
                 id: '005',
-                value: 'Чтобы не уплыть, когда они будут спать',
+                value: {
+                    en: 'So as not to sail away when they are sleeping',
+                    ru: 'Чтобы не уплыть, когда они будут спать',
+                },
             },
             {
                 id: '006',
-                value: 'Боятся потеряться',
+                value: {
+                    en: 'They are afraid of getting lost',
+                    ru: 'Боятся потеряться',
+                },
             }
         ],
         correct: '005',
     },
     {
-        question: 'У какой птицы нет перьев?',
+        question: {
+            en: 'Which bird doesn\'t have feathers?',
+            ru: 'У какой птицы нет перьев?',
+        },
         answers: [
             {
                 id: '007',
-                value: 'у серой куропатки',
+                value: {
+                    en: 'The grey partridge has no feathers',
+                    ru: 'У серой куропатки',
+                },
             },
             {
                 id: '008',
-                value: 'у альбатроса',
+                value: {
+                    en: 'The albatross\' has no feathers',
+                    ru: 'У альбатроса',
+                },
             },
             {
                 id: '009',
-                value: 'у пингвина',
+                value: {
+                    en: 'The penguin has no feathers',
+                    ru: 'У пингвина',
+                },
             }
         ],
         correct: '009',
     },
     {
-        question: 'Какое млекопитающее умеет летать?',
+        question: {
+            en: 'What kind of mammal can fly?',
+            ru: 'Какое млекопитающее умеет летать?',
+        },
         answers: [
             {
                 id: '010',
-                value: 'Белка-летяга',
+                value: {
+                    en: 'Flying Squirrel',
+                    ru: 'Белка-летяга',
+                },
             },
             {
                 id: '011',
-                value: 'Летучая мышь',
+                value: {
+                    en: "The Bat",
+                    ru: 'Летучая мышь',
+                },
             },
             {
                 id: '012',
-                value: 'Ленивец',
+                value: {
+                    en: 'Sloth',
+                    ru: 'Ленивец',
+                },
             }
         ],
         correct: '011'
     },
     {
-        question: 'У какого кота нет шерсти?',
+        question: {
+            en: 'Which cat doesn\'t have fur?',
+            ru: 'У какого кота нет шерсти?',
+        },
         answers: [
             {
                 id: '013',
-                value: 'у сфинкса',
+                value: {
+                    en: 'the sphinx has no fur',
+                    ru: 'у сфинкса',
+                },
             },
             {
                 id: '014',
-                value: 'у мейн куна',
+                value: {
+                    en: 'the Maine coon has no fur',
+                    ru: 'у мейн куна',
+                },
             },
             {
                 id: '015',
-                value: 'у манчкина',
+                value: {
+                    en: "munchkin has no wool",
+                    ru: 'у манчкина',
+                },
             }
         ],
         correct: '013',
     },
     {
-        question: 'Кого называют «Царь зверей»?',
+        question: {
+            en: 'Who is called the "King of Beasts"?',
+            ru: 'Кого называют «Царь зверей»?',
+        },
         answers: [
             {
                 id: '016',
-                value: 'Удава',
+                value: {
+                    en: 'boa constrictor',
+                    ru: 'Удава',
+                },
             },
             {
                 id: '017',
-                value: 'Льва',
+                value: {
+                    en: 'lion',
+                    ru: 'Льва',
+                },
             },
             {
                 id: '018',
-                value: 'Пантеру',
+                value: {
+                    en: 'panther',
+                    ru: 'Пантеру',
+                },
             }
         ],
         correct: '017'
     },
     {
-        question: 'Какая птица быстро бегает, но не летает?',
+        question: {
+            en: 'Which bird runs fast but doesn\'t fly?',
+            ru: 'Какая птица быстро бегает, но не летает?',
+        },
         answers: [
             {
                 id: '019',
-                value: 'Страус',
+                value: {
+                    en: 'Ostrich',
+                    ru: 'Страус',
+                },
             },
             {
                 id: '020',
-                value: 'Пингвин',
+                value: {
+                    en: 'Penguin',
+                    ru: 'Пингвин',
+                },
             },
             {
                 id: '021',
-                value: 'Цесарка',
+                value: {
+                    en: 'Guinea Fowl',
+                    ru: 'Цесарка',
+                },
             }
         ],
         correct: '019'
     },
     {
-        question: 'Как называются детёныши коровы?',
+        question: {
+            en: 'What are the cow cubs called?',
+            ru: 'Как называются детёныши коровы?',
+        },
         answers: [
             {
                 id: '022',
-                value: 'Бычата',
+                value: {
+                    en: 'kids',
+                    ru: 'Бычата',
+                },
             },
             {
                 id: '023',
-                value: 'Телята',
+                value: {
+                    en: 'Calves',
+                    ru: 'Телята',
+                },
             },
             {
                 id: '024',
-                value: 'Жеребята',
+                value: {
+                    en: 'Foals',
+                    ru: 'Жеребята',
+                },
             }
         ],
         correct: '023'
     },
     {
-        question: 'Кто является самым крупным животным на Земле?',
+        question: {
+            en: 'Who is the largest animal on Earth?',
+            ru: 'Кто является самым крупным животным на Земле?',
+        },
         answers: [
             {
                 id: '025',
-                value: 'Черепаха',
+                value: {
+                    en: 'Turtle',
+                    ru: 'Черепаха',
+                },
             },
             {
                 id: '026',
-                value: 'Носорог',
+                value: {
+                    en: 'Rhinoceros',
+                    ru: 'Носорог',
+                },
             },
             {
                 id: '027',
-                value: 'Синий кит',
+                value: {
+                    en: 'Blue Whale',
+                    ru: 'Синий кит',
+                },
             }
         ],
         correct: '027',
     },
     {
-        question: 'Символом чего считается сова?',
+        question: {
+            en: 'What is the owl considered a symbol of?',
+            ru: 'Символом чего считается сова?',
+        },
         answers: [
             {
                 id: '028',
-                value: 'Доброты',
+                value: {
+                    en: 'kindness',
+                    ru: 'Доброты',
+                },
             },
             {
                 id: '029',
-                value: 'Терпения',
+                value: {
+                    en: 'patience',
+                    ru: 'Терпения',
+                },
             },
             {
                 id: '030',
-                value: 'Мудрости',
+                value: {
+                    en: 'wisdom',
+                    ru: 'Мудрости',
+                },
             }
         ],
         correct: '030',
     },
     {
-        question: 'Какое сухопутное животное наиболее широко открывает рот?',
+        question: {
+            en: 'Which land animal opens its mouth most widely?',
+            ru: 'Какое сухопутное животное наиболее широко открывает рот?',
+        },
         answers: [
             {
                 id: '031',
-                value: 'Бегемот',
+                value: {
+                    en: 'Behemoth',
+                    ru: 'Бегемот',
+                },
             },
             {
                 id: '032',
-                value: 'Слон',
+                value: {
+                    en: 'Elephant',
+                    ru: 'Слон',
+                },
             },
             {
                 id: '033',
-                value: 'Заяц',
+                value: {
+                    en: 'Hare',
+                    ru: 'Заяц',
+                },
             }
         ],
         correct: '031'
     },
     {
-        question: 'Какой рыбы не существует?',
+        question: {
+            en: 'What kind of fish doesn\'t exist?',
+            ru: 'Какой рыбы не существует?',
+        },
         answers: [
             {
                 id: '034',
-                value: 'Рыба-плоскогубцы',
+                value: {
+                    en: 'Pliers fish',
+                    ru: 'Рыба-плоскогубцы',
+                },
             },
             {
                 id: '035',
-                value: 'Рыба-молот',
+                value: {
+                    en: 'Hammer fish',
+                    ru: 'Рыба-молот',
+                },
             },
             {
                 id: '036',
-                value: 'Рыба-пила',
+                value: {
+                    en: 'Sawfish',
+                    ru: 'Рыба-пила',
+                },
             }
         ],
         correct: '034',
     },
     {
-        question: 'Какой зверь сам себе строит дом? ',
+        question: {
+            en: 'What kind of animal builds a house for itself? ',
+            ru: 'Какой зверь сам себе строит дом? ',
+        },
         answers: [
             {
                 id: '037',
-                value: 'мартышка',
+                value: {
+                    en: 'monkey',
+                    ru: 'мартышка',
+                },
             },
             {
                 id: '038',
-                value: 'бобер',
+                value: {
+                    en: 'beaver',
+                    ru: 'бобер',
+                },
             },
             {
                 id: '039',
-                value: 'осёл',
+                value: {
+                    en: 'donkey',
+                    ru: 'осёл',
+                },
             }
         ],
         correct: '038'
     },
     {
-        question: 'Кто является самой большой кошкой на планете?',
+        question: {
+            en: 'Who is the biggest cat on the planet?',
+            ru: 'Кто является самой большой кошкой на планете?',
+        },
         answers: [
             {
                 id: '040',
-                value: 'Рысь',
+                value: {
+                    en: 'Lynx',
+                    ru: 'Рысь',
+                },
             },
             {
                 id: '041',
-                value: 'Тигр',
+                value: {
+                    en: 'Tiger',
+                    ru: 'Тигр',
+                },
             },
             {
                 id: '042',
-                value: 'Гепард',
+                value: {
+                    en: 'Cheetah',
+                    ru: 'Гепард',
+                },
             }
         ],
         correct: '041',
     },
     {
-        question: 'Какому животному легко существовать без воды?',
+        question: {
+            en: 'What animal can easily exist without water?',
+            ru: 'Какому животному легко существовать без воды?',
+        },
         answers: [
             {
                 id: '043',
-                value: 'верблюду',
+                value: {
+                    en: 'camel',
+                    ru: 'верблюду',
+                },
             },
             {
                 id: '044',
-                value: 'жирафу',
+                value: {
+                    en: 'giraffe',
+                    ru: 'жирафу',
+                },
             },
             {
                 id: '045',
-                value: 'носорогу',
+                value: {
+                    en: 'rhinoceros',
+                    ru: 'носорогу',
+                },
             }
         ],
         correct: '043',
@@ -275,271 +455,451 @@ const animal = [
 
 const tales = [
     {
-        question: 'Самое популярное число в русских сказках?',
+        question: {
+            en: 'Russian fairy tales\' most used number?',
+            ru: 'Самое популярное число в русских сказках?',
+        },
         answers: [
             {
                 id: '046',
-                value: '2',
+                value: {
+                    en: '2',
+                    ru: '2',
+                },
             },
             {
                 id: '047',
-                value: '3',
+                value: {
+                    en: '3',
+                    ru: '3',
+                },
             },
             {
                 id: '048',
-                value: '10',
+                value: {
+                    en: '10',
+                    ru: '10',
+                },
             }
         ],
         correct: '047',
     },
     {
-        question: 'Сивка-Бурка – это …?',
+        question: {
+            en: 'Sivka-Burka is...?',
+            ru: 'Сивка-Бурка – это …?',
+        },
         answers: [
             {
                 id: '049',
-                value: 'Трава',
+                value: {
+                    en: 'Grass',
+                    ru: 'Трава',
+                },
             },
             {
                 id: '050',
-                value: 'Конь',
+                value: {
+                    en: 'Horse',
+                    ru: 'Конь',
+                },
             },
             {
                 id: '051',
-                value: 'Одежда',
+                value: {
+                    en: 'Clothes',
+                    ru: 'Одежда',
+                },
             }
         ],
         correct: '050',
     },
     {
-        question: 'Что убило Кощея?',
+        question: {
+            en: 'What killed Koshchei?',
+            ru: 'Что убило Кощея?',
+        },
         answers: [
             {
                 id: '052',
-                value: 'заклинание',
+                value: {
+                    en: 'spell',
+                    ru: 'заклинание',
+                },
             },
             {
                 id: '053',
-                value: 'меч',
+                value: {
+                    en: 'sword',
+                    ru: 'меч',
+                },
             },
             {
                 id: '054',
-                value: 'игла',
+                value: {
+                    en: 'needle',
+                    ru: 'игла',
+                },
             }
         ],
         correct: '054',
     },
     {
-        question: 'На чём отдыхает Иванушка-дурачок?',
+        question: {
+            en: 'What does Ivan the Fool sleep on?',
+            ru: 'На чём отдыхает Иванушка-дурачок?',
+        },
         answers: [
             {
                 id: '055',
-                value: 'На лавочке',
+                value: {
+                    en: 'On the bench',
+                    ru: 'На лавочке',
+                },
             },
             {
                 id: '056',
-                value: 'На печке',
+                value: {
+                    en: 'On the stove',
+                    ru: 'На печке',
+                },
             },
             {
                 id: '057',
-                value: 'В кинотеатре',
+                value: {
+                    en: 'At the cinema',
+                    ru: 'В кинотеатре',
+                },
             }
         ],
         correct: '056',
     },
     {
-        question: 'У какого царя похитили жар-птицу?',
+        question: {
+            en: 'Which king was the firebird stolen from?',
+            ru: 'У какого царя похитили жар-птицу?',
+        },
         answers: [
             {
                 id: '058',
-                value: 'у Афрона',
+                value: {
+                    en: 'Afron',
+                    ru: 'у Афрона',
+                },
             },
             {
                 id: '059',
-                value: 'у Федора',
+                value: {
+                    en: 'Theodore',
+                    ru: 'у Федора',
+                },
             },
             {
                 id: '060',
-                value: 'у Мартына',
+                value: {
+                    en: 'Martin',
+                    ru: 'у Мартына',
+                },
             }
         ],
         correct: '058',
     },
     {
-        question: 'В чём постоянно летает Баба-Яга?',
+        question: {
+            en: 'What does Baba Yaga fly in all the time?',
+            ru: 'В чём постоянно летает Баба-Яга?',
+        },
         answers: [
             {
                 id: '061',
-                value: 'в вертолете',
+                value: {
+                    en: 'helicopter',
+                    ru: 'в вертолете',
+                },
             },
             {
                 id: '062',
-                value: 'В ступе',
+                value: {
+                    en: 'mortar',
+                    ru: 'в ступе',
+                },
             },
             {
                 id: '063',
-                value: 'на шаре',
+                value: {
+                    en: 'ball',
+                    ru: 'на шаре',
+                },
             }
         ],
         correct: '062',
     },
     {
-        question: 'В какой сказке злая мачеха на поминки блины пекла?',
+        question: {
+            en: 'In what fairy tale did the evil stepmother bake pancakes for the wake?',
+            ru: 'В какой сказке злая мачеха на поминки блины пекла?',
+        },
         answers: [
             {
                 id: '064',
-                value: 'Морозко',
+                value: {
+                    en: 'Frost',
+                    ru: 'Морозко',
+                },
             },
             {
                 id: '065',
-                value: 'Белоснежка и семь гномов',
+                value: {
+                    en: 'Snow White and the Seven Dwarfs',
+                    ru: 'Белоснежка и семь гномов',
+                },
             },
             {
                 id: '066',
-                value: 'Двенадцать месяцев',
+                value: {
+                    en: 'Twelve months',
+                    ru: 'Двенадцать месяцев',
+                },
             }
         ],
         correct: '064',
     },
     {
-        question: 'Какое название было у корабля, который умел летать?',
+        question: {
+            en: 'What was the name of the ship that could fly?',
+            ru: 'Какое название было у корабля, который умел летать?',
+        },
         answers: [
             {
                 id: '067',
-                value: 'Марина',
+                value: {
+                    en: 'Marina',
+                    ru: 'Марина',
+                },
             },
             {
                 id: '068',
-                value: 'Летучий Голландец',
+                value: {
+                    en: 'The Flying Dutchman',
+                    ru: 'Летучий голландец',
+                },
             },
             {
                 id: '069',
-                value: 'Глория',
+                value: {
+                    en: 'Gloria',
+                    ru: 'Глория',
+                },
             }
         ],
         correct: '068',
     },
     {
-        question: 'Сколько голов было у Змея-Горыныча?',
+        question: {
+            en: 'How many heads did the Gorynych Snake have?',
+            ru: 'Сколько голов было у Змея-Горыныча?',
+        },
         answers: [
             {
                 id: '070',
-                value: '9',
+                value: {
+                    en: '9',
+                    ru: '9',
+                },
             },
             {
                 id: '071',
-                value: '4',
+                value: {
+                    en: '4',
+                    ru: '4',
+                },
             },
             {
                 id: '072',
-                value: '3',
+                value: {
+                    en: '3',
+                    ru: '3',
+                },
             }
         ],
         correct: '072',
     },
     {
-        question: 'Кого удалось спасти Дюймовочке?',
+        question: {
+            en: 'Who did Thumbelina manage to save?',
+            ru: 'Кого удалось спасти Дюймовочке?',
+        },
         answers: [
             {
                 id: '073',
-                value: 'Стрижа',
+                value: {
+                    en: 'swift',
+                    ru: 'Стрижа',
+                },
             },
             {
                 id: '074',
-                value: 'Мартышку',
+                value: {
+                    en: 'cuckoo',
+                    ru: 'Кукушку',
+                },
             },
             {
                 id: '075',
-                value: 'Ласточку',
+                value: {
+                    en: 'swallow',
+                    ru: 'Ласточку',
+                },
             }
         ],
         correct: '075',
     },
     {
-        question: 'Каких трех известных строителей домов вы знаете?',
+        question: {
+            en: 'Which three famous house builders do you know?',
+            ru: 'Каких трех известных строителей домов вы знаете?',
+        },
         answers: [
             {
                 id: '076',
-                value: 'Поросята',
+                value: {
+                    en: 'Piglets',
+                    ru: 'Поросята',
+                },
             },
             {
                 id: '077',
-                value: 'Три медведя',
+                value: {
+                    en: 'Three Bears',
+                    ru: 'Три медведя',
+                },
             },
             {
                 id: '078',
-                value: 'Лисички',
+                value: {
+                    en: 'Chanterelles',
+                    ru: 'Лисички',
+                },
             }
         ],
         correct:'076',
     },
     {
-        question: 'Сколько было богатырей?',
+        question: {
+            en: 'How many heroes were there?',
+            ru: 'Сколько было богатырей?',
+        },
         answers: [
             {
                 id: '079',
-                value: '3',
+                value: {
+                    en: '3',
+                    ru: '3',
+                },
             },
             {
                 id: '080',
-                value: '6',
+                value: {
+                    en: '6',
+                    ru: '6',
+                },
             },
             {
                 id: '081',
-                value: '12',
+                value: {
+                    en: '12',
+                    ru: '12',
+                },
             }
         ],
         correct: '079',
     },
     {
-        question: 'У кого получилось приготовить кашу из топора?',
+        question: {
+            en: 'Who managed to cook porridge from an axe?',
+            ru: 'У кого получилось приготовить кашу из топора?',
+        },
         answers: [
             {
                 id: '082',
-                value: 'у Алладина',
+                value: {
+                    en: 'Aladdin',
+                    ru: 'у Алладина',
+                },
             },
             {
                 id: '083',
-                value: 'у солдата',
+                value: {
+                    en: 'soldier',
+                    ru: 'у солдата',
+                },
             },
             {
                 id: '084',
-                value: 'у Емели',
+                value: {
+                    en: 'Emelya',
+                    ru: 'у Емели',
+                },
             }
         ],
         correct: '083',
     },
     {
-        question: 'Кто уплетал калачи и ехал на печи?',
+        question: {
+            en: 'Who ate rolls and rode on the stove?',
+            ru: 'Кто уплетал калачи и ехал на печи?',
+        },
         answers: [
             {
                 id: '085',
-                value: 'Иванушка',
+                value: {
+                    en: 'Ivanushka',
+                    ru: 'Иванушка',
+                },
             },
             {
                 id: '086',
-                value: 'Емеля',
+                value: {
+                    en: 'Emelya',
+                    ru: 'Емеля',
+                },
             },
             {
                 id: '087',
-                value: 'Карлсон',
+                value: {
+                    en: 'Carlson',
+                    ru: 'Карлсон',
+                },
             }
         ],
         correct: '086',
     },
     {
-        question: 'Кого любил Алладин?',
+        question: {
+            en: 'Who did Aladdin love?',
+            ru: 'Кого любил Алладин?',
+        },
         answers: [
             {
                 id: '088',
-                value: 'принцессу Жасмин',
+                value: {
+                    en: 'princess Jasmine',
+                    ru: 'принцессу Жасмин',
+                },
             },
             {
                 id: '089',
-                value: 'Герду',
+                value: {
+                    en: 'Gerda',
+                    ru: 'Герду',
+                },
             },
             {
                 id: '090',
-                value: 'Машеньку',
+                value: {
+                    en: 'Masha',
+                    ru: 'Машеньку',
+                },
             }
         ],
         correct: '088',
@@ -548,271 +908,451 @@ const tales = [
 
 const cartoons = [
     {
-        question: 'Кто всегда придёт на помощь?',
+        question: {
+            en: 'Who will always come to the rescue?',
+            ru: 'Кто всегда придёт на помощь?',
+        },
         answers: [
             {
                 id: '091',
-                value: 'Печкин',
+                value: {
+                    en: 'Pechkin',
+                    ru: 'Печкин',
+                },
             },
             {
                 id: '092',
-                value: 'Чип и Дейл',
+                value: {
+                    en: 'Chip and Dale',
+                    ru: 'Чип и Дейл',
+                },
             },
             {
                 id: '093',
-                value: 'Крокодил Гена',
+                value: {
+                    en: 'Crocodile Gene',
+                    ru: 'Крокодил Гена',
+                },
             }
         ],
         correct: '092',
     },
     {
-        question: 'Как звали умывальников начальника и командира мочалок из сказки Чуковского?',
+        question: {
+            en: 'What was the name of the washbasins of the chief and commander of the washcloths from Chukovsky\'s fairy tale?',
+            ru: 'Как звали умывальников начальника и командира мочалок из сказки Чуковского?',
+        },
         answers: [
             {
                 id: '094',
-                value: 'Скрудж Макдак',
+                value: {
+                    en: 'Scrooge McDuck',
+                    ru: 'Скрудж Макдак',
+                },
             },
             {
                 id: '095',
-                value: 'Мойдодыр',
+                value: {
+                    en: 'Moidodyr',
+                    ru: 'Мойдодыр',
+                },
             },
             {
                 id: '096',
-                value: 'Чиполлино',
+                value: {
+                    en: 'Cipollino',
+                    ru: 'Чиполлино',
+                },
             }
         ],
         correct: '095'
     },
     {
-        question: 'Кто был самый умный в Цветочном городе?',
+        question: {
+            en: 'Who was the smartest in Flower City?',
+            ru: 'Кто был самый умный в Цветочном городе?',
+        },
         answers: [
             {
                 id: '097',
-                value: 'Винтик',
+                value: {
+                    en: 'Cog',
+                    ru: 'Винтик',
+                },
             },
             {
                 id: '098',
-                value: 'Молчун',
+                value: {
+                    en: 'Silent',
+                    ru: 'Молчун',
+                },
             },
             {
                 id: '099',
-                value: 'Знайка',
+                value: {
+                    en: 'Znayka',
+                    ru: 'Знайка',
+                },
             }
         ],
         correct: '099',
     },
     {
-        question: 'Кто играл роль Деда Мороза в «Ну, погоди!»?',
+        question: {
+            en: 'Who played the role of Santa Claus in "Well, wait!"?',
+            ru: 'Кто играл роль Деда Мороза в «Ну, погоди!»?',
+        },
         answers: [
             {
                 id: '100',
-                value: 'Дед Мороз',
+                value: {
+                    en: 'Santa Claus',
+                    ru: 'Дед Мороз',
+                },
             },
             {
                 id: '101',
-                value: 'Заяц',
+                value: {
+                    en: 'Hare',
+                    ru: 'Заяц',
+                },
             },
             {
                 id: '102',
-                value: 'Снегурочка',
+                value: {
+                    en: 'The Snow Maiden',
+                    ru: 'Снегурочка',
+                },
             }
         ],
         correct: '101',
     },
     {
-        question: 'Какой персонаж сказки расстреливал голубей из рогатки?',
+        question: {
+            en: 'Which fairy tale character shot pigeons with a slingshot?',
+            ru: 'Какой персонаж сказки расстреливал голубей из рогатки?',
+        },
         answers: [
             {
                 id: '103',
-                value: 'Старуха Шапокляк',
+                value: {
+                    en: 'The Old Woman Shapoklyak',
+                    ru: 'Старуха Шапокляк',
+                },
             },
             {
                 id: '104',
-                value: 'Федора',
+                value: {
+                    en: 'Fedora',
+                    ru: 'Федора',
+                },
             },
             {
                 id: '105',
-                value: 'Пеппа',
+                value: {
+                    en: 'Peppa',
+                    ru: 'Пеппа',
+                },
             }
         ],
         correct: '103',
     },
     {
-        question: 'Кто был другом Ариэль?',
+        question: {
+            en: 'Who was Ariel\'s friend?',
+            ru: 'Кто был другом Ариэль?',
+        },
         answers: [
             {
                 id: '106',
-                value: 'Губка Боб',
+                value: {
+                    en: 'SpongeBob',
+                    ru: 'Губка Боб',
+                },
             },
             {
                 id: '107',
-                value: 'Краб',
+                value: {
+                    en: 'Crab',
+                    ru: 'Краб',
+                },
             },
             {
                 id: '108',
-                value: 'Кальмар',
+                value: {
+                    en: 'Squid',
+                    ru: 'Кальмар',
+                },
             }
         ],
         correct: '107',
     },
     {
-        question: 'Кем был Мушу из мультфильма «Мулан»?',
+        question: {
+            en: 'Who was Mushu from the cartoon "Mulan"?',
+            ru: 'Кем был Мушу из мультфильма «Мулан»?',
+        },
         answers: [
             {
                 id: '109',
-                value: 'Драконом',
+                value: {
+                    en: 'Dragon',
+                    ru: 'Драконом',
+                },
             },
             {
                 id: '110',
-                value: 'Птицей',
+                value: {
+                    en: 'Bird',
+                    ru: 'Птицей',
+                },
             },
             {
                 id: '111',
-                value: 'Вараном',
+                value: {
+                    en: 'Varan',
+                    ru: 'Вараном',
+                },
             }
         ],
         correct: '109',
     },
     {
-        question: 'Какое, по мнению Карлсона, лучшее лекарство от болезни?',
+        question: {
+            en: 'What, in Carlson\'s opinion, is the best cure for the disease?',
+            ru: 'Какое, по мнению Карлсона, лучшее лекарство от болезни?',
+        },
         answers: [
             {
                 id: '112',
-                value: 'Шоколад',
+                value: {
+                    en: 'Chocolate',
+                    ru: 'Шоколад',
+                },
             },
             {
                 id: '113',
-                value: 'Варенье',
+                value: {
+                    en: 'Jam',
+                    ru: 'Варенье',
+                },
             },
             {
                 id: '114',
-                value: 'Тефтельки',
+                value: {
+                    en: 'Meatballs',
+                    ru: 'Тефтельки',
+                },
             }
         ],
         correct: '113',
     },
     {
-        question: 'Как называются круглые герои популярного мультика?',
+        question: {
+            en: 'What are the round heroes of the popular cartoon called?',
+            ru: 'Как называются круглые герои популярного мультика?',
+        },
         answers: [
             {
                 id: '115',
-                value: 'Кругляшки',
+                value: {
+                    en: 'Roundels',
+                    ru: 'Кругляшки',
+                },
             },
             {
                 id: '116',
-                value: 'Толстяки',
+                value: {
+                    en: 'Fatties',
+                    ru: 'Толстяки',
+                },
             },
             {
                 id: '117',
-                value: 'Смешарики',
+                value: {
+                    en: 'Smeshariki',
+                    ru: 'Смешарики',
+                },
             }
         ],
         correct: '117',
     },
     {
-        question: 'Как называется мультик про доброго персонажа с Луны?',
+        question: {
+            en: 'What is the name of the cartoon about the kind character from the moon?',
+            ru: 'Как называется мультик про доброго персонажа с Луны?',
+        },
         answers: [
             {
                 id: '118',
-                value: 'Фиксик',
+                value: {
+                    en: 'Fixik',
+                    ru: 'Фиксик',
+                },
             },
             {
                 id: '119',
-                value: 'Луноход',
+                value: {
+                    en: 'Lunokhod',
+                    ru: 'Луноход',
+                },
             },
             {
                 id: '120',
-                value: 'Приключения Лунтика',
+                value: {
+                    en: 'The Adventures of Luntik',
+                    ru: 'Приключения Лунтика',
+                },
             }
         ],
         correct: '120',
     },
     {
-        question: 'Любимое лакомство Винни-Пуха?',
+        question: {
+            en: 'Winnie the Pooh\'s favorite treat?',
+            ru: 'Любимое лакомство Винни-Пуха?',
+        },
         answers: [
             {
                 id: '121',
-                value: 'Мед',
+                value: {
+                    en: 'Honey',
+                    ru: 'Мед',
+                },
             },
             {
                 id: '122',
-                value: 'Шашлык',
+                value: {
+                    en: 'Shish kebab',
+                    ru: 'Шашлык',
+                },
             },
             {
                 id: '123',
-                value: 'Клубника',
+                value: {
+                    en: 'Strawberries',
+                    ru: 'Клубника',
+                },
             }
         ],
         correct: '121',
     },
     {
-        question: 'Имя кота, который никак не может поймать маленького мышонка?',
+        question: {
+            en: 'The name of the cat that can\'t catch the little mouse in any way?',
+            ru: 'Имя кота, который никак не может поймать маленького мышонка?',
+        },
         answers: [
             {
                 id: '124',
-                value: 'Том',
+                value: {
+                    en: 'Tom',
+                    ru: 'Том',
+                },
             },
             {
                 id: '125',
-                value: 'Кузя',
+                value: {
+                    en: 'Kuzya',
+                    ru: 'Кузя',
+                },
             },
             {
                 id: '126',
-                value: 'Маугли',
+                value: {
+                    en: 'Mowgli',
+                    ru: 'Маугли',
+                },
             }
         ],
         correct: '124',
     },
     {
-        question: 'Что мешало спать принцессе на матрасе?',
+        question: {
+            en: 'What prevented the princess from sleeping on the mattress?',
+            ru: 'Что мешало спать принцессе на матрасе?',
+        },
         answers: [
             {
                 id: '127',
-                value: 'фасолина',
+                value: {
+                    en: 'bean',
+                    ru: 'фасолина',
+                },
             },
             {
                 id: '128',
-                value: 'горошина',
+                value: {
+                    en: 'pea',
+                    ru: 'горошина',
+                },
             },
             {
                 id: '129',
-                value: 'пшено',
+                value: {
+                    en: 'millet',
+                    ru: 'пшено',
+                },
             }
         ],
         correct: '128',
     },
     {
-        question: 'Какое количество мартышек равно длине удава?',
+        question: {
+            en: 'What is the number of monkeys equal to the length of the boa constrictor?',
+            ru: 'Какое количество мартышек равно длине удава?',
+        },
         answers: [
             {
                 id: '130',
-                value: '39',
+                value: {
+                    en: '39',
+                    ru: '39',
+                },
             },
             {
                 id: '131',
-                value: '5',
+                value: {
+                    en: '5',
+                    ru: '5',
+                },
             },
             {
                 id: '132',
-                value: '12',
+                value: {
+                    en: '12',
+                    ru: '12',
+                },
             }
         ],
         correct: '131',
     },
     {
-        question: 'Что прилетело к царевне-лягушке?',
+        question: {
+            en: 'What came to the frog princess?',
+            ru: 'Что прилетело к царевне-лягушке?',
+        },
         answers: [
             {
                 id: '133',
-                value: 'стрела',
+                value: {
+                    en: 'arrow',
+                    ru: 'стрела',
+                },
             },
             {
                 id: '134',
-                value: 'шоколадка',
+                value: {
+                    en: 'chocolate',
+                    ru: 'шоколадка',
+                },
             },
             {
                 id: '135',
-                value: 'зеркальце',
+                value: {
+                    en: 'mirror',
+                    ru: 'зеркальце',
+                },
             }
         ],
         correct: '133',
@@ -821,271 +1361,451 @@ const cartoons = [
 
 const mathematics = [
     {
-        question: 'Сколько раз в году поднимается солнце?',
+        question: {
+            en: 'How many times a year does the sun rise?',
+            ru: 'Сколько раз в году поднимается солнце?',
+        },
         answers: [
             {
                 id: '136',
-                value: '12',
+                value: {
+                    en: '12',
+                    ru: '12',
+                },
             },
             {
                 id: '137',
-                value: '365',
+                value: {
+                    en: '365',
+                    ru: '365',
+                },
             },
             {
                 id: '138',
-                value: '52',
+                value: {
+                    en: '52',
+                    ru: '52',
+                },
             }
         ],
         correct: '137',
     },
     {
-        question: 'Какое утверждение не надо доказывать?',
+        question: {
+            en: 'Which statement does not need to be proved?',
+            ru: 'Какое утверждение не надо доказывать?',
+        },
         answers: [
             {
                 id: '139',
-                value: 'Аргумент',
+                value: {
+                    en: 'Argument',
+                    ru: 'Аргумент',
+                },
             },
             {
                 id: '140',
-                value: 'Аксиома',
+                value: {
+                    en: 'Axiom',
+                    ru: 'Аксиома',
+                },
             },
             {
                 id: '141',
-                value: 'Теорема',
+                value: {
+                    en: 'Theorem',
+                    ru: 'Теорема',
+                },
             }
         ],
         correct: '140',
     },
     {
-        question: 'Если один угол тупой в треугольнике, то остальные … ?',
+        question: {
+            en: 'If one corner is obtuse in a triangle, then the rest... ?',
+            ru: 'Если один угол тупой в треугольнике, то остальные … ?',
+        },
         answers: [
             {
                 id: '142',
-                value: 'умные',
+                value: {
+                    en: 'smart',
+                    ru: 'умные',
+                },
             },
             {
                 id: '143',
-                value: 'красивые',
+                value: {
+                    en: 'beautiful',
+                    ru: 'красивые',
+                },
             },
             {
                 id: '144',
-                value: 'острые',
+                value: {
+                    en: 'sharp',
+                    ru: 'острые',
+                },
             }
         ],
         correct: '144',
     },
     {
-        question: 'Какая общая сумма всех углов в треугольнике?',
+        question: {
+            en: 'What is the total sum of all the angles in a triangle?',
+            ru: 'Какая общая сумма всех углов в треугольнике?',
+        },
         answers: [
             {
                 id: '145',
-                value: '360',
+                value: {
+                    en: '360',
+                    ru: '360',
+                },
             },
             {
                 id: '146',
-                value: '180',
+                value: {
+                    en: '180',
+                    ru: '180',
+                },
             },
             {
                 id: '147',
-                value: '270',
+                value: {
+                    en: '270',
+                    ru: '270',
+                },
             }
         ],
         correct: '146',
     },
     {
-        question: 'Сколько равно полное число процентов?',
+        question: {
+            en: 'How much is the full number of percentages?',
+            ru: 'Полное число процентов?',
+        },
         answers: [
             {
                 id: '148',
-                value: '100',
+                value: {
+                    en: '100',
+                    ru: '100',
+                },
             },
             {
                 id: '149',
-                value: '200',
+                value: {
+                    en: '200',
+                    ru: '200',
+                },
             },
             {
                 id: '150',
-                value: '150',
+                value: {
+                    en: '500',
+                    ru: '500',
+                },
             }
         ],
         correct: '148',
     },
     {
-        question: 'Как называется луч с начальной и конечной точкой?',
+        question: {
+            en: 'What is the name of a ray with a starting and ending point?',
+            ru: 'Как называется луч с начальной и конечной точкой?',
+        },
         answers: [
             {
                 id: '151',
-                value: 'вектор',
+                value: {
+                    en: 'vector',
+                    ru: 'вектор',
+                },
             },
             {
                 id: '152',
-                value: 'отрезок',
+                value: {
+                    en: 'segment',
+                    ru: 'отрезок',
+                },
             },
             {
                 id: '153',
-                value: 'линия',
+                value: {
+                    en: 'line',
+                    ru: 'линия',
+                },
             }
         ],
         correct: '152',
     },
     {
-        question: 'Сосчитайте, сколько будет 1 % от 1000?',
+        question: {
+            en: 'Count how much is 1% of 1000?',
+            ru: 'Сосчитайте, сколько будет 1% от 1000?',
+        },
         answers: [
             {
                 id: '154',
-                value: '10',
+                value: {
+                    en: '10',
+                    ru: '10',
+                },
             },
             {
                 id: '155',
-                value: '100',
+                value: {
+                    en: '100',
+                    ru: '100',
+                },
             },
             {
                 id: '156',
-                value: '1',
+                value: {
+                    en: '1',
+                    ru: '1',
+                },
             }
         ],
         correct: '154',
     },
     {
-        question: 'Чему равно число Пи?',
+        question: {
+            en: 'What is the number Pi?',
+            ru: 'Чему равно число Пи?',
+        },
         answers: [
             {
                 id: '157',
-                value: '4.32',
+                value: {
+                    en: '4.32',
+                    ru: '4.32',
+                },
             },
             {
                 id: '158',
-                value: '3.14',
+                value: {
+                    en: '3.14',
+                    ru: '3.14',
+                },
             },
             {
                 id: '159',
-                value: '5.34',
+                value: {
+                    en: '5.34',
+                    ru: '5.34',
+                },
             }
         ],
         correct: '158',
     },
     {
-        question: 'Сколько всего существует цифр?',
+        question: {
+            en: 'How many numbers are there in total?',
+            ru: 'Сколько всего существует цифр?',
+        },
         answers: [
             {
                 id: '160',
-                value: 'Много',
+                value: {
+                    en: 'A lot',
+                    ru: 'Много',
+                },
             },
             {
                 id: '161',
-                value: '100',
+                value: {
+                    en: '100',
+                    ru: '100',
+                },
             },
             {
                 id: '162',
-                value: '10',
+                value: {
+                    en: '10',
+                    ru: '10',
+                },
             }
         ],
         correct: '162',
     },
     {
-        question: '2 сына и 2 отца съели 3 яйца. Сколько яиц съел каждый?',
+        question: {
+            en: '2 sons and 2 fathers ate 3 eggs. How many eggs did everyone eat?',
+            ru: '2 сына и 2 отца съели 3 яйца. Сколько яиц съел каждый?',
+        },
         answers: [
             {
                 id: '163',
-                value: 'По два',
+                value: {
+                    en: 'Two by two',
+                    ru: 'По два',
+                },
             },
             {
                 id: '164',
-                value: 'меньше одного',
+                value: {
+                    en: 'less than one',
+                    ru: 'меньше одного',
+                },
             },
             {
                 id: '165',
-                value: 'одно',
+                value: {
+                    en: 'one',
+                    ru: 'одно',
+                },
             }
         ],
         correct: '165',
     },
     {
-        question: 'Каким словом обозначался миллион в Древней Руси? ',
+        question: {
+            en: 'What was the word for a million in Ancient Russia? ',
+            ru: 'Каким словом обозначался миллион в Древней Руси? ',
+        },
         answers: [
             {
                 id: '166',
-                value: 'тьма',
+                value: {
+                    en: 'darkness',
+                    ru: 'тьма',
+                },
             },
             {
                 id: '167',
-                value: 'много',
+                value: {
+                    en: 'a lot',
+                    ru: 'много',
+                },
             },
             {
                 id: '168',
-                value: 'лимон',
+                value: {
+                    en: 'lemon',
+                    ru: 'лимон',
+                },
             }
         ],
         correct: '166',
     },
     {
-        question: 'Какие цифры употребляются в десятичной системе? ',
+        question: {
+            en: 'What numbers are used in the decimal system? ',
+            ru: 'Какие цифры употребляются в десятичной системе? ',
+        },
         answers: [
             {
                 id: '169',
-                value: 'арабские',
+                value: {
+                    en: 'arabic',
+                    ru: 'арабские',
+                },
             },
             {
                 id: '170',
-                value: 'римские',
+                value: {
+                    en: 'Roman',
+                    ru: 'римские',
+                },
             },
             {
                 id: '171',
-                value: 'египетские',
+                value: {
+                    en: 'egyptian',
+                    ru: 'египетские',
+                },
             }
         ],
         correct: '169',
     },
     {
-        question: 'Какое наибольшее целое отрицательное число? ',
+        question: {
+            en: 'What is the largest negative integer? ',
+            ru: 'Какое наибольшее целое отрицательное число? ',
+        },
         answers: [
             {
                 id: '172',
-                value: '-бесконечность',
+                value: {
+                    en: '-infinity',
+                    ru: '-бесконечность',
+                },
             },
             {
                 id: '173',
-                value: '-1',
+                value: {
+                    en: '-1',
+                    ru: '-1',
+                },
             },
             {
                 id: '174',
-                value: '-0.5',
+                value: {
+                    en: '-0.5',
+                    ru: '-0.5',
+                },
             }
         ],
         correct: '173',
     },
     {
-        question: 'Как называется наука о числах, их свойствах и действиях над ними?',
+        question: {
+            en: 'What is the name of the science of numbers, their properties and actions on them?',
+            ru: 'Как называется наука о числах, их свойствах и действиях над ними?',
+        },
         answers: [
             {
                 id: '175',
-                value: 'алгебра',
+                value: {
+                    en: 'algebra',
+                    ru: 'алгебра',
+                },
             },
             {
                 id: '176',
-                value: 'арифметика',
+                value: {
+                    en: 'arithmetic',
+                    ru: 'арифметика',
+                },
             },
             {
                 id: '177',
-                value: 'геометрия',
+                value: {
+                    en: 'geometry',
+                    ru: 'геометрия',
+                },
             }
         ],
         correct: '176',
     },
     {
-        question: 'На руках 10 пальцев. Сколько пальцев на 10 руках?',
+        question: {
+            en: 'There are 10 fingers on the hands. How many fingers on 10 hands?',
+            ru: 'На руках 10 пальцев. Сколько пальцев на 10 руках?',
+        },
         answers: [
             {
                 id: '178',
-                value: '50',
+                value: {
+                    en: '50',
+                    ru: '50',
+                },
             },
             {
                 id: '179',
-                value: '100',
+                value: {
+                    en: '100',
+                    ru: '100',
+                },
             },
             {
                 id: '180',
-                value: 'больше, чем 100',
+                value: {
+                    en: 'more than 100',
+                    ru: 'больше, чем 100',
+                },
             }
         ],
         correct: '178',
@@ -1094,309 +1814,567 @@ const mathematics = [
 
 const nature = [
     {
-        question: 'Под воздействием какой силы предметы падают на землю?',
+        question: {
+            en: 'Under the influence of what force do objects fall to the ground?',
+            ru: 'Под воздействием какой силы предметы падают на землю?',
+        },
         answers: [
             {
                 id: '181',
-                value: 'Электромагнетизм',
+                value: {
+                    en: 'Electromagnetism',
+                    ru: 'Электромагнетизм',
+                },
             },
             {
                 id: '182',
-                value: 'Гравитация',
+                value: {
+                    en: 'Gravity',
+                    ru: 'Гравитация',
+                },
             },
             {
                 id: '183',
-                value: 'Ядерная сила',
+                value: {
+                    en: 'Nuclear power',
+                    ru: 'Ядерная сила',
+                },
             }
         ],
         correct: '182',
     },
     {
-        question: 'Какой водоем самый большой на Земле?',
+        question: {
+            en: 'What is the largest body of water on Earth?',
+            ru: 'Какой водоем самый большой на Земле?',
+        },
         answers: [
             {
                 id: '184',
-                value: 'Атлантический океан',
+                value: {
+                    en: 'Atlantic Ocean',
+                    ru: 'Атлантический океан',
+                },
             },
             {
                 id: '185',
-                value: 'Тихий океан',
+                value: {
+                    en: 'Pacific Ocean',
+                    ru: 'Тихий океан',
+                },
             },
             {
                 id: '186',
-                value: 'Индийский океан',
+                value: {
+                    en: 'Indian Ocean',
+                    ru: 'Индийский океан',
+                },
             }
         ],
         correct: '185',
     },
     {
-        question: 'Сколько всего континентов?',
+        question: {
+            en: 'How many continents are there in total?',
+            ru: 'Сколько всего континентов?',
+        },
         answers: [
             {
                 id: '187',
-                value: '7',
+                value: {
+                    en: '7',
+                    ru: '7',
+                },
             },
             {
                 id: '188',
-                value: '8',
+                value: {
+                    en: '8',
+                    ru: '8',
+                },
             },
             {
                 id: '189',
-                value: '6',
+                value: {
+                    en: '6',
+                    ru: '6',
+                },
             }
         ],
         correct: '189',
     },
     {
-        question: 'Какая самая длинная река в России?',
+        question: {
+            en: 'What is the longest river in Russia?',
+            ru: 'Какая самая длинная река в России?',
+        },
         answers: [
             {
                 id: '190',
-                value: 'Волга',
+                value: {
+                    en: 'Volga',
+                    ru: 'Волга',
+                },
             },
             {
                 id: '191',
-                value: 'Лена',
+                value: {
+                    en: 'Lena',
+                    ru: 'Лена',
+                },
             },
             {
                 id: '192',
-                value: 'Енисей',
+                value: {
+                    en: 'Yenisei',
+                    ru: 'Енисей',
+                },
             }
         ],
         correct: '191',
     },
     {
-        question: 'Какие деревья растут из желудей?',
+        question: {
+            en: 'What trees grow out of acorns?',
+            ru: 'Какие деревья растут из желудей?',
+        },
         answers: [
             {
                 id: '193',
-                value: 'дубы',
+                value: {
+                    en: 'oaks',
+                    ru: 'дубы',
+                },
             },
             {
                 id: '194',
-                value: 'Клены',
+                value: {
+                    en: 'Maples',
+                    ru: 'Клены',
+                },
             },
             {
                 id: '195',
-                value: 'грецкие орехи',
+                value: {
+                    en: 'walnuts',
+                    ru: 'грецкие орехи',
+                },
             }
         ],
         correct: '193',
     },
     {
-        question: 'Сколько цветов в радуге?',
+        question: {
+            en: 'How many colors are there in a rainbow?',
+            ru: 'Сколько цветов в радуге?',
+        },
         answers: [
             {
                 id: '196',
-                value: '6',
+                value: {
+                    en: '6',
+                    ru: '6',
+                },
             },
             {
                 id: '197',
-                value: '7',
+                value: {
+                    en: '7',
+                    ru: '7',
+                },
             },
             {
                 id: '198',
-                value: '8',
+                value: {
+                    en: '8',
+                    ru: '8',
+                },
             }
         ],
         correct: '197',
     },
     {
-        question: 'Как называется наука о растениях?',
+        question: {
+            en: 'What is the name of plant science?',
+            ru: 'Как называется наука о растениях?',
+        },
         answers: [
             {
                 id: '199',
-                value: 'Ботаника',
+                value: {
+                    en: 'Botany',
+                    ru: 'Ботаника',
+                },
             },
             {
                 id: '200',
-                value: 'Биология',
+                value: {
+                    en: 'Biology',
+                    ru: 'Биология',
+                },
             },
             {
                 id: '201',
-                value: 'Анатомия',
+                value: {
+                    en: 'Anatomy',
+                    ru: 'Анатомия',
+                },
             }
         ],
         correct: '199',
     },
     {
-        question: 'Что зимой, и летом одним цветом?',
+        question: {
+            en: 'What is the same color in winter and summer?',
+            ru: 'Что зимой, и летом одним цветом?',
+        },
         answers: [
             {
                 id: '202',
-                value: 'Липа',
+                value: {
+                    en: 'Linden tree',
+                    ru: 'Липа',
+                },
             },
             {
                 id: '203',
-                value: 'Ель',
+                value: {
+                    en: 'Spruce',
+                    ru: 'Ель',
+                },
             },
             {
                 id: '204',
-                value: 'Береза',
+                value: {
+                    en: 'Birch',
+                    ru: 'Береза',
+                },
             }
         ],
         correct: '203',
     },
     {
-        question: 'Как называют самую большую ягоду?',
+        question: {
+            en: 'What is the biggest berry called?',
+            ru: 'Как называют самую большую ягоду?',
+        },
         answers: [
             {
                 id: '205',
-                value: 'Киви',
+                value: {
+                    en: 'Kiwi',
+                    ru: 'Киви',
+                },
             },
             {
                 id: '206',
-                value: 'гранат',
+                value: {
+                    en: 'garnet',
+                    ru: 'гранат',
+                },
             },
             {
                 id: '207',
-                value: 'Арбуз',
+                value: {
+                    en: 'Watermelon',
+                    ru: 'Арбуз',
+                },
             }
         ],
         correct: '207',
     },
     {
-        question: 'Профессия человека, ухаживающего за растениями?',
+        question: {
+            en: 'The profession of a person caring for plants?',
+            ru: 'Профессия человека, ухаживающего за растениями?',
+        },
         answers: [
             {
                 id: '208',
-                value: 'биолог',
+                value: {
+                    en: 'biologist',
+                    ru: 'биолог',
+                },
             },
             {
                 id: '209',
-                value: 'ботаник',
+                value: {
+                    en: 'nerd',
+                    ru: 'ботаник',
+                },
             },
             {
                 id: '210',
-                value: 'садовник',
+                value: {
+                    en: 'the gardener',
+                    ru: 'садовник',
+                },
             }
         ],
         correct: '210',
     },
     {
-        question: 'Чем дышат растения?',
+        question: {
+            en: 'What do plants breathe?',
+            ru: 'Чем дышат растения?',
+        },
         answers: [
             {
                 id: '211',
-                value: 'кислородом',
+                value: {
+                    en: 'oxygen',
+                    ru: 'кислородом',
+                },
             },
             {
                 id: '212',
-                value: 'углекислым газом',
+                value: {
+                    en: 'carbon dioxide',
+                    ru: 'углекислым газом',
+                },
             },
             {
                 id: '213',
-                value: 'паром',
+                value: {
+                    en: 'steam',
+                    ru: 'паром',
+                },
             }
         ],
         correct: '211',
     },
     {
-        question: 'Какое дерево называют плакучим?',
+        question: {
+            en: 'Which tree is called weeping?',
+            ru: 'Какое дерево называют плакучим?',
+        },
         answers: [
             {
                 id: '214',
-                value: 'клен',
+                value: {
+                    en: 'maple',
+                    ru: 'клен',
+                },
             },
             {
                 id: '215',
-                value: 'береза',
+                value: {
+                    en: 'birch',
+                    ru: 'береза',
+                },
             },
             {
                 id: '216',
-                value: 'ива',
+                value: {
+                    en: 'willow',
+                    ru: 'ива',
+                },
             }
         ],
         correct: '216',
     },
     {
-        question: 'Чего ждать, если птицы низко летают?',
+        question: {
+            en: 'What to expect if the birds are flying low?',
+            ru: 'Чего ждать, если птицы низко летают?',
+        },
         answers: [
             {
                 id: '217',
-                value: 'жару',
+                value: {
+                    en: 'heat',
+                    ru: 'жару',
+                },
             },
             {
                 id: '218',
-                value: 'дождя',
+                value: {
+                    en: 'rain',
+                    ru: 'дождя',
+                },
             },
             {
                 id: '219',
-                value: 'снег',
+                value: {
+                    en: 'snow',
+                    ru: 'снег',
+                },
             }
         ],
         correct: '218',
     },
     {
-        question: 'Какое устройство поможет сориентироваться на местности?',
+        question: {
+            en: 'Which device will help you navigate the terrain?',
+            ru: 'Какое устройство поможет сориентироваться на местности?',
+        },
         answers: [
             {
                 id: '220',
-                value: 'бинокль',
+                value: {
+                    en: 'binoculars',
+                    ru: 'бинокль',
+                },
             },
             {
                 id: '221',
-                value: 'компас',
+                value: {
+                    en: 'compass',
+                    ru: 'компас',
+                },
             },
             {
                 id: '222',
-                value: 'барометр',
+                value: {
+                    en: 'barometer',
+                    ru: 'барометр',
+                },
             }
         ],
         correct: '221',
     },
     {
-        question: 'Как называют домик бобров?',
+        question: {
+            en: 'What is the name of the beaver house?',
+            ru: 'Как называют домик бобров?',
+        },
         answers: [
             {
                 id: '223',
-                value: 'хатка',
+                value: {
+                    en: 'beaver house',
+                    ru: 'хатка',
+                },
             },
             {
                 id: '224',
-                value: 'избушка',
+                value: {
+                    en: 'hut',
+                    ru: 'избушка',
+                },
             },
             {
                 id: '225',
-                value: 'таунхаус',
+                value: {
+                    en: 'townhouse',
+                    ru: 'таунхаус',
+                },
             }
         ],
         correct: '223',
     },
 ]
 
-export const data: TDb = {
+const data: TDb = {
     quizzes: {
         animal: {
             id: 'animal',
-            title: 'Про\&nbspживотных',
+            title: {
+                en: 'About animals',
+                ru: 'Про\&nbspживотных',
+            },
             tasks: animal,
             bgSrc: './assets/images/img8.jpg',
         },
         tales: {
             id: 'tales',
-            title: 'Сказки',
+            title: {
+                en: 'Fairy tales',
+                ru: 'Сказки',
+            },
             tasks: tales,
             bgSrc: './assets/images/img2.jpg',
         },
         cartoons: {
             id: 'cartoons',
-            title: 'Мультфильмы',
+            title: {
+                en: 'Cartoons',
+                ru: 'Мультфильмы',
+            },
             tasks: cartoons,
             bgSrc: './assets/images/img6.jpg',
         },
         mathematics: {
             id: 'mathematics',
-            title: 'Математика',
+            title: {
+                en: 'Mathematics',
+                ru: 'Математика',
+            },
             tasks: mathematics,
             bgSrc: './assets/images/img10.jpg',
         },
         nature: {
             id: 'nature',
-            title: 'Природа',
+            title: {
+                en: 'Nature',
+                ru: 'Природа',
+            },
             tasks: nature,
             bgSrc: './assets/images/img15.jpg',
         },
+    },
+}
+
+export const texts = {
+    age: {
+        en: 'from 6 to 12 years old',
+        ru: 'с 6 до 12 лет',
+    },
+    total: {
+        en: 'total points: ',
+        ru: 'всего баллов: ',
+    },
+    next: {
+        en: 'next',
+        ru: 'далее',
+    },
+    result: {
+        en: 'result',
+        ru: 'результаты',
+    },
+    question: {
+        en: 'question ',
+        ru: 'вопрос ',
+    },
+    questions: {
+        en: 'total questions: ',
+        ru: 'всего вопросов: ',
+    },
+    correct: {
+        en: 'correct answers: ',
+        ru: 'правильных ответов: ',
+    },
+    quiz: {
+        en: 'name of the quiz: ',
+        ru: 'название квиза: ',
+    },
+    home: {
+        en: 'home',
+        ru: 'на главную',
+    },
+    scored: {
+        en: 'you scored ',
+        ru: 'ты набрал ',
+    },
+    points: {
+        en: 'points ',
+        ru: 'балл(а/ов) ',
+    },
+    from: {
+        en: 'from ',
+        ru: 'из ',
+    },
+    better: {
+        en: 'You can do better...',
+        ru: 'ты можешь лучше...',
+    },
+    aristotle: {
+        en: 'Aristotle of our days. ',
+        ru: 'Аристотель наших дней. ',
+    },
+    ovation: {
+        en: 'I give you a standing ovation!',
+        ru: 'аплодирую тебе стоя!',
     },
 }
 

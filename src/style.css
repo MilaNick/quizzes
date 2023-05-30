@@ -55,6 +55,7 @@ h2 {
 
 .meta-wrap {
     display: flex;
+    justify-content: space-between;
     width: 60%;
     height: 10vh;
     margin: 0 auto;
@@ -70,6 +71,36 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: 70%;
+}
+
+.select-wrap {
+    width: 10%;
+}
+
+#lang {
+    display: block;
+    font-size: 1em;
+    padding: 1.2em;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: uppercase;
+    color: #fe7a00;
+    -o-appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    outline: 1px solid #fe7a00;
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 .menu {
@@ -192,7 +223,6 @@ h2 {
 .greyProgress {
     width: 59%;
     margin-top: 1rem;
-    padding: 0 0.2rem 0 0.2rem;
     background-color: #d9c2a7;
     border-radius: 1.5rem;
 }
@@ -248,7 +278,7 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 20vh;
+    height: 25vh;
     margin-top: 1rem;
     background-color: transparent;
     font-size: 1.3rem;

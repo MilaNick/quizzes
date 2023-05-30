@@ -7,15 +7,22 @@ export type TState = {
     taskIndex: null | number
     correctAnswerCount: null | number
     totalCorrectAnswerCount: null | number
+    lang: 'en' | 'ru'
 }
 
 export type TAnswer = {
     id: string,
-    value: string,
+    value: {
+        en: string,
+        ru: string,
+    },
 }
 
 export type TTask = {
-    question: string,
+    question: {
+        en: string,
+        ru: string,
+    },
     answers: TAnswer[],
     correct: string,
 }
@@ -23,7 +30,10 @@ export type TTask = {
 
 export type TQuiz = {
     id: TQuizId,
-    title: string,
+    title: {
+        en: string,
+        ru: string,
+    },
     tasks: TTask[],
     bgSrc: string,
 }
