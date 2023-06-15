@@ -3,6 +3,186 @@ import {TDb} from "./interface";
 const animal = [
     {
         question: {
+            en: 'How to distinguish an insect from a spider?',
+            ru: 'Как отличить насекомое от паука?',
+        },
+        answers: [
+            {
+                id: '226',
+                value: {
+                    en: 'Insects have six legs, spiders have eight',
+                    ru: 'У насекомых шесть ног, у пауков – восемь',
+                },
+            },
+            {
+                id: '227',
+                value: {
+                    en: 'Insects can have wings, spiders don\'t',
+                    ru: 'У насекомых могут быть крылья, у пауков они отсутствуют',
+                },
+            },
+            {
+                id: '228',
+                value: {
+                    en: 'All of the above facts',
+                    ru: 'Все вышеперечисленные факты',
+                },
+            }
+        ],
+        correct: '228',
+    },
+    {
+        question: {
+            en: 'Why do snakes stick out their tongue?',
+            ru: 'Почему змеи высовывают язык?',
+        },
+        answers: [
+            {
+                id: '229',
+                value: {
+                    en: 'To lick the prey',
+                    ru: 'Чтобы облизать добычу',
+                },
+            },
+            {
+                id: '230',
+                value: {
+                    en: 'To make a hissing sound',
+                    ru: 'Чтобы издать шипящий звук',
+                },
+            },
+            {
+                id: '231',
+                value: {
+                    en: 'To "smell" the air',
+                    ru: 'Чтобы «понюхать» воздух',
+                },
+            }
+        ],
+        correct: '231',
+    },
+    {
+        question: {
+            en: 'What is the name of the smallest bird?',
+            ru: 'Как называется самая маленькая птичка?',
+        },
+        answers: [
+            {
+                id: '232',
+                value: {
+                    en: 'a Warbler',
+                    ru: 'Камышевка',
+                },
+            },
+            {
+                id: '233',
+                value: {
+                    en: 'a hummingbird',
+                    ru: 'Колибри',
+                },
+            },
+            {
+                id: '234',
+                value: {
+                    en: 'a goldcrest',
+                    ru: 'королек',
+                },
+            }
+        ],
+        correct: '233',
+    },
+    {
+        question: {
+            en: 'What do pandas like to eat?',
+            ru: 'Что любят кушать панды?',
+        },
+        answers: [
+            {
+                id: '235',
+                value: {
+                    en: 'a Bamboo',
+                    ru: 'Бамбук',
+                },
+            },
+            {
+                id: '236',
+                value: {
+                    en: 'ice cream',
+                    ru: 'мороженое',
+                },
+            },
+            {
+                id: '237',
+                value: {
+                    en: 'a corn',
+                    ru: 'кукурузу',
+                },
+            }
+        ],
+        correct: '235',
+    },
+    {
+        question: {
+            en: 'Which animal uses its tail as a steering wheel?',
+            ru: 'Какое животное использует свой хвост в качестве руля?',
+        },
+        answers: [
+            {
+                id: '238',
+                value: {
+                    en: 'a Rat',
+                    ru: 'Крыса',
+                },
+            },
+            {
+                id: '239',
+                value: {
+                    en: 'a Squirrel',
+                    ru: 'Белка',
+                },
+            },
+            {
+                id: '240',
+                value: {
+                    en: 'a goat',
+                    ru: 'Коза',
+                },
+            }
+        ],
+        correct: '239',
+    },
+    {
+        question: {
+            en: 'Which bird used to act as a postman?',
+            ru: 'Какая птица раньше выполняла роль почтальона?',
+        },
+        answers: [
+            {
+                id: '241',
+                value: {
+                    en: 'a owl',
+                    ru: 'сова',
+                },
+            },
+            {
+                id: '242',
+                value: {
+                    en: 'a falcon',
+                    ru: 'сокол',
+                },
+            },
+            {
+                id: '243',
+                value: {
+                    en: 'a pigeon',
+                    ru: 'голубь',
+                },
+            }
+        ],
+        correct: '243',
+    },
+    {
+        question: {
             en: 'How does the platypus differ from other mammals?',
             ru: 'Чем утконос отличается от других млекопитающих? ',
         },
@@ -114,7 +294,7 @@ const animal = [
             {
                 id: '012',
                 value: {
-                    en: 'Sloth',
+                    en: 'a Sloth',
                     ru: 'Ленивец',
                 },
             }
@@ -167,14 +347,14 @@ const animal = [
             {
                 id: '017',
                 value: {
-                    en: 'lion',
+                    en: 'a lion',
                     ru: 'Льва',
                 },
             },
             {
                 id: '018',
                 value: {
-                    en: 'panther',
+                    en: 'a panther',
                     ru: 'Пантеру',
                 },
             }
@@ -190,21 +370,21 @@ const animal = [
             {
                 id: '019',
                 value: {
-                    en: 'Ostrich',
+                    en: 'a Ostrich',
                     ru: 'Страус',
                 },
             },
             {
                 id: '020',
                 value: {
-                    en: 'Penguin',
+                    en: 'a Penguin',
                     ru: 'Пингвин',
                 },
             },
             {
                 id: '021',
                 value: {
-                    en: 'Guinea Fowl',
+                    en: 'a Guinea Fowl',
                     ru: 'Цесарка',
                 },
             }
@@ -250,14 +430,14 @@ const animal = [
             {
                 id: '025',
                 value: {
-                    en: 'Turtle',
+                    en: 'a Turtle',
                     ru: 'Черепаха',
                 },
             },
             {
                 id: '026',
                 value: {
-                    en: 'Rhinoceros',
+                    en: 'a Rhinoceros',
                     ru: 'Носорог',
                 },
             },
@@ -310,21 +490,21 @@ const animal = [
             {
                 id: '031',
                 value: {
-                    en: 'Behemoth',
+                    en: 'a Behemoth',
                     ru: 'Бегемот',
                 },
             },
             {
                 id: '032',
                 value: {
-                    en: 'Elephant',
+                    en: 'a Elephant',
                     ru: 'Слон',
                 },
             },
             {
                 id: '033',
                 value: {
-                    en: 'Hare',
+                    en: 'a Hare',
                     ru: 'Заяц',
                 },
             }
@@ -354,7 +534,7 @@ const animal = [
             {
                 id: '036',
                 value: {
-                    en: 'Sawfish',
+                    en: 'a Sawfish',
                     ru: 'Рыба-пила',
                 },
             }
@@ -370,21 +550,21 @@ const animal = [
             {
                 id: '037',
                 value: {
-                    en: 'monkey',
+                    en: 'a monkey',
                     ru: 'мартышка',
                 },
             },
             {
                 id: '038',
                 value: {
-                    en: 'beaver',
+                    en: 'a beaver',
                     ru: 'бобер',
                 },
             },
             {
                 id: '039',
                 value: {
-                    en: 'donkey',
+                    en: 'a donkey',
                     ru: 'осёл',
                 },
             }
@@ -400,21 +580,21 @@ const animal = [
             {
                 id: '040',
                 value: {
-                    en: 'Lynx',
+                    en: 'a Lynx',
                     ru: 'Рысь',
                 },
             },
             {
                 id: '041',
                 value: {
-                    en: 'Tiger',
+                    en: 'a Tiger',
                     ru: 'Тигр',
                 },
             },
             {
                 id: '042',
                 value: {
-                    en: 'Cheetah',
+                    en: 'a Cheetah',
                     ru: 'Гепард',
                 },
             }
@@ -430,21 +610,21 @@ const animal = [
             {
                 id: '043',
                 value: {
-                    en: 'camel',
+                    en: 'a camel',
                     ru: 'верблюду',
                 },
             },
             {
                 id: '044',
                 value: {
-                    en: 'giraffe',
+                    en: 'a giraffe',
                     ru: 'жирафу',
                 },
             },
             {
                 id: '045',
                 value: {
-                    en: 'rhinoceros',
+                    en: 'a rhinoceros',
                     ru: 'носорогу',
                 },
             }
@@ -454,6 +634,186 @@ const animal = [
 ]
 
 const tales = [
+    {
+        question: {
+            en: 'How to summon a genie from a lamp?',
+            ru: 'Как вызвать джина из лампы?',
+        },
+        answers: [
+            {
+                id: '244',
+                value: {
+                    en: 'turn it on',
+                    ru: 'включить её',
+                },
+            },
+            {
+                id: '245',
+                value: {
+                    en: 'Lose her',
+                    ru: 'Потереть её',
+                },
+            },
+            {
+                id: '246',
+                value: {
+                    en: 'say the word',
+                    ru: 'сказать слово',
+                },
+            }
+        ],
+        correct: '245',
+    },
+    {
+        question: {
+            en: 'What was the name of the boy from the tree?',
+            ru: 'Как звали мальчика из дерева? ',
+        },
+        answers: [
+            {
+                id: '247',
+                value: {
+                    en: 'Pinocchio',
+                    ru: 'Буратино',
+                },
+            },
+            {
+                id: '248',
+                value: {
+                    en: 'baby',
+                    ru: 'пупсик',
+                },
+            },
+            {
+                id: '249',
+                value: {
+                    en: 'nutcracker',
+                    ru: 'щелкунчик',
+                },
+            }
+        ],
+        correct: '247',
+    },
+    {
+        question: {
+            en: 'Who has the ugly duckling become?',
+            ru: 'Кем стал гадкий утёнок?',
+        },
+        answers: [
+            {
+                id: '250',
+                value: {
+                    en: 'a frog',
+                    ru: 'лягушкой',
+                },
+            },
+            {
+                id: '251',
+                value: {
+                    en: 'a swan',
+                    ru: 'лебедем',
+                },
+            },
+            {
+                id: '252',
+                value: {
+                    en: 'a prince',
+                    ru: 'принцем',
+                },
+            }
+        ],
+        correct: '251',
+    },
+    {
+        question: {
+            en: 'What kind of animal did Shapoklyak carry with her?',
+            ru: 'Какое животное носила с собой Шапокляк?',
+        },
+        answers: [
+            {
+                id: '253',
+                value: {
+                    en: 'a rat',
+                    ru: 'крысу',
+                },
+            },
+            {
+                id: '254',
+                value: {
+                    en: 'a monkey',
+                    ru: 'обезьянку',
+                },
+            },
+            {
+                id: '255',
+                value: {
+                    en: 'a squirrel',
+                    ru: 'белку',
+                },
+            }
+        ],
+        correct: '253',
+    },
+    {
+        question: {
+            en: 'What did Little Red Riding Hood bring to Grandma?',
+            ru: 'Что несла Красная Шапочка бабушке?',
+        },
+        answers: [
+            {
+                id: '256',
+                value: {
+                    en: 'a cake',
+                    ru: 'торт',
+                },
+            },
+            {
+                id: '257',
+                value: {
+                    en: 'a pies',
+                    ru: 'пирожки',
+                },
+            },
+            {
+                id: '258',
+                value: {
+                    en: 'ice cream',
+                    ru: 'мороженое',
+                },
+            }
+        ],
+        correct: '257',
+    },
+    {
+        question: {
+            en: 'Who did the crocodile Gene work for?',
+            ru: 'Кем работал крокодил Гена?',
+        },
+        answers: [
+            {
+                id: '259',
+                value: {
+                    en: 'a crocodile',
+                    ru: 'крокодилом',
+                },
+            },
+            {
+                id: '260',
+                value: {
+                    en: 'a zookeeper',
+                    ru: 'смотрителем',
+                },
+            },
+            {
+                id: '261',
+                value: {
+                    en: 'a toy',
+                    ru: 'игрушкой',
+                },
+            }
+        ],
+        correct: '259',
+    },
     {
         question: {
             en: 'Russian fairy tales\' most used number?',
@@ -493,14 +853,14 @@ const tales = [
             {
                 id: '049',
                 value: {
-                    en: 'Grass',
+                    en: 'a Grass',
                     ru: 'Трава',
                 },
             },
             {
                 id: '050',
                 value: {
-                    en: 'Horse',
+                    en: 'a Horse',
                     ru: 'Конь',
                 },
             },
@@ -523,21 +883,21 @@ const tales = [
             {
                 id: '052',
                 value: {
-                    en: 'spell',
+                    en: 'a spell',
                     ru: 'заклинание',
                 },
             },
             {
                 id: '053',
                 value: {
-                    en: 'sword',
+                    en: 'a sword',
                     ru: 'меч',
                 },
             },
             {
                 id: '054',
                 value: {
-                    en: 'needle',
+                    en: 'a needle',
                     ru: 'игла',
                 },
             }
@@ -613,21 +973,21 @@ const tales = [
             {
                 id: '061',
                 value: {
-                    en: 'helicopter',
+                    en: 'a helicopter',
                     ru: 'в вертолете',
                 },
             },
             {
                 id: '062',
                 value: {
-                    en: 'mortar',
+                    en: 'a mortar',
                     ru: 'в ступе',
                 },
             },
             {
                 id: '063',
                 value: {
-                    en: 'ball',
+                    en: 'a ball',
                     ru: 'на шаре',
                 },
             }
@@ -636,7 +996,7 @@ const tales = [
     },
     {
         question: {
-            en: 'In what fairy tale did the evil stepmother bake pancakes for the wake?',
+            en: 'In which fairy tale did the stepmother bake pancakes for the wake?',
             ru: 'В какой сказке злая мачеха на поминки блины пекла?',
         },
         answers: [
@@ -733,21 +1093,21 @@ const tales = [
             {
                 id: '073',
                 value: {
-                    en: 'swift',
+                    en: 'a swift',
                     ru: 'Стрижа',
                 },
             },
             {
                 id: '074',
                 value: {
-                    en: 'cuckoo',
+                    en: 'a cuckoo',
                     ru: 'Кукушку',
                 },
             },
             {
                 id: '075',
                 value: {
-                    en: 'swallow',
+                    en: 'a swallow',
                     ru: 'Ласточку',
                 },
             }
@@ -909,6 +1269,186 @@ const tales = [
 const cartoons = [
     {
         question: {
+            en: 'Who was Alice looking for in a dark hole?',
+            ru: 'Кого искала Алиса в темной норе?',
+        },
+        answers: [
+            {
+                id: '262',
+                value: {
+                    en: 'the green frog',
+                    ru: 'зеленую лягушку',
+                },
+            },
+            {
+                id: '263',
+                value: {
+                    en: 'dirty squirrel',
+                    ru: 'грязную белку',
+                },
+            },
+            {
+                id: '264',
+                value: {
+                    en: 'White Rabbit',
+                    ru: 'Белого кролика',
+                },
+            }
+        ],
+        correct: '264',
+    },
+    {
+        question: {
+            en: 'What was the name of Christopher Robin\'s friend?',
+            ru: 'Как звали друга Кристофера Робина?',
+        },
+        answers: [
+            {
+                id: '265',
+                value: {
+                    en: 'Shrek',
+                    ru: 'Шрэк',
+                },
+            },
+            {
+                id: '266',
+                value: {
+                    en: 'Winnie the Pooh',
+                    ru: 'Винни-Пух',
+                },
+            },
+            {
+                id: '267',
+                value: {
+                    en: 'The Swan Princess',
+                    ru: 'Принцесса-лебедь',
+                },
+            }
+        ],
+        correct: '266',
+    },
+    {
+        question: {
+            en: 'What was the name of Pumbaa\'s best friend?',
+            ru: 'Как звали лучшего друга Пумбы?',
+        },
+        answers: [
+            {
+                id: '268',
+                value: {
+                    en: 'Jerry',
+                    ru: 'Джерри',
+                },
+            },
+            {
+                id: '269',
+                value: {
+                    en: 'Timon',
+                    ru: 'Тимон',
+                },
+            },
+            {
+                id: '270',
+                value: {
+                    en: 'simpson',
+                    ru: 'симпсон',
+                },
+            }
+        ],
+        correct: '269',
+    },
+    {
+        question: {
+            en: 'How should I eat a sandwich according to Matroskin?',
+            ru: 'Как надо есть будерброд по мнению Матроскина?',
+        },
+        answers: [
+            {
+                id: '271',
+                value: {
+                    en: 'with music',
+                    ru: 'c музыкой',
+                },
+            },
+            {
+                id: '272',
+                value: {
+                    en: 'under the blanket',
+                    ru: 'под одеялом',
+                },
+            },
+            {
+                id: '273',
+                value: {
+                    en: 'Sausage down',
+                    ru: 'Колбасой вниз',
+                },
+            }
+        ],
+        correct: '273',
+    },
+    {
+        question: {
+            en: 'What is the name of the green giant living in the swamp?',
+            ru: 'Как зовут зеленого великана, живущего на болоте?',
+        },
+        answers: [
+            {
+                id: '274',
+                value: {
+                    en: 'Shrek',
+                    ru: 'Шрэк',
+                },
+            },
+            {
+                id: '275',
+                value: {
+                    en: 'Theodore',
+                    ru: 'Федор',
+                },
+            },
+            {
+                id: '276',
+                value: {
+                    en: 'Carlson',
+                    ru: 'Карлсон',
+                },
+            }
+        ],
+        correct: '274',
+    },
+    {
+        question: {
+            en: 'What was the name of Kai\'s sister?',
+            ru: 'Как звали сестру Кая?',
+        },
+        answers: [
+            {
+                id: '277',
+                value: {
+                    en: 'Gerda',
+                    ru: 'Герда',
+                },
+            },
+            {
+                id: '278',
+                value: {
+                    en: 'Emily',
+                    ru: 'Эмилия',
+                },
+            },
+            {
+                id: '279',
+                value: {
+                    en: 'Freya',
+                    ru: 'Фрея',
+                },
+            }
+        ],
+        correct: '277',
+    },
+    {
+        question: {
             en: 'Who will always come to the rescue?',
             ru: 'Кто всегда придёт на помощь?',
         },
@@ -939,8 +1479,8 @@ const cartoons = [
     },
     {
         question: {
-            en: 'What was the name of the washbasins of the chief and commander of the washcloths from Chukovsky\'s fairy tale?',
-            ru: 'Как звали умывальников начальника и командира мочалок из сказки Чуковского?',
+            en: 'What was the name of the commander of the washcloths?',
+            ru: 'Как звали командира мочалок из сказки?',
         },
         answers: [
             {
@@ -1013,7 +1553,7 @@ const cartoons = [
             {
                 id: '101',
                 value: {
-                    en: 'Hare',
+                    en: 'rabbit',
                     ru: 'Заяц',
                 },
             },
@@ -1096,21 +1636,21 @@ const cartoons = [
             {
                 id: '109',
                 value: {
-                    en: 'Dragon',
+                    en: 'a Dragon',
                     ru: 'Драконом',
                 },
             },
             {
                 id: '110',
                 value: {
-                    en: 'Bird',
+                    en: 'a Bird',
                     ru: 'Птицей',
                 },
             },
             {
                 id: '111',
                 value: {
-                    en: 'Varan',
+                    en: 'a Varan',
                     ru: 'Вараном',
                 },
             }
@@ -1126,21 +1666,21 @@ const cartoons = [
             {
                 id: '112',
                 value: {
-                    en: 'Chocolate',
+                    en: 'a Chocolate',
                     ru: 'Шоколад',
                 },
             },
             {
                 id: '113',
                 value: {
-                    en: 'Jam',
+                    en: 'a Jam',
                     ru: 'Варенье',
                 },
             },
             {
                 id: '114',
                 value: {
-                    en: 'Meatballs',
+                    en: 'a Meatballs',
                     ru: 'Тефтельки',
                 },
             }
@@ -1216,7 +1756,7 @@ const cartoons = [
             {
                 id: '121',
                 value: {
-                    en: 'Honey',
+                    en: 'a aHoney',
                     ru: 'Мед',
                 },
             },
@@ -1230,7 +1770,7 @@ const cartoons = [
             {
                 id: '123',
                 value: {
-                    en: 'Strawberries',
+                    en: 'a Strawberries',
                     ru: 'Клубника',
                 },
             }
@@ -1276,21 +1816,21 @@ const cartoons = [
             {
                 id: '127',
                 value: {
-                    en: 'bean',
+                    en: 'a bean',
                     ru: 'фасолина',
                 },
             },
             {
                 id: '128',
                 value: {
-                    en: 'pea',
+                    en: 'a pea',
                     ru: 'горошина',
                 },
             },
             {
                 id: '129',
                 value: {
-                    en: 'millet',
+                    en: 'a millet',
                     ru: 'пшено',
                 },
             }
@@ -1299,7 +1839,7 @@ const cartoons = [
     },
     {
         question: {
-            en: 'What is the number of monkeys equal to the length of the boa constrictor?',
+            en: 'The number of monkeys equal to the length of the boa constrictor?',
             ru: 'Какое количество мартышек равно длине удава?',
         },
         answers: [
@@ -1336,21 +1876,21 @@ const cartoons = [
             {
                 id: '133',
                 value: {
-                    en: 'arrow',
+                    en: 'a arrow',
                     ru: 'стрела',
                 },
             },
             {
                 id: '134',
                 value: {
-                    en: 'chocolate',
+                    en: 'a chocolate',
                     ru: 'шоколадка',
                 },
             },
             {
                 id: '135',
                 value: {
-                    en: 'mirror',
+                    en: 'a mirror',
                     ru: 'зеркальце',
                 },
             }
@@ -1360,6 +1900,186 @@ const cartoons = [
 ]
 
 const mathematics = [
+    {
+        question: {
+            en: 'Which geometric shape has no corners?',
+            ru: 'У какой геометрической фигуры нет углов?',
+        },
+        answers: [
+            {
+                id: '280',
+                value: {
+                    en: 'a circle',
+                    ru: 'круг',
+                },
+            },
+            {
+                id: '281',
+                value: {
+                    en: 'cylinder',
+                    ru: 'цилиндр',
+                },
+            },
+            {
+                id: '282',
+                value: {
+                    en: 'cone',
+                    ru: 'конус',
+                },
+            }
+        ],
+        correct: '280',
+    },
+    {
+        question: {
+            en: 'The distance from the center of the circle to any on its circumference?',
+            ru: 'Расстояние от центра круга до любой на его окружности?',
+        },
+        answers: [
+            {
+                id: '283',
+                value: {
+                    en: 'diameter',
+                    ru: 'диаметр',
+                },
+            },
+            {
+                id: '284',
+                value: {
+                    en: 'radius',
+                    ru: 'радиус',
+                },
+            },
+            {
+                id: '285',
+                value: {
+                    en: 'segment',
+                    ru: 'сегмент',
+                },
+            }
+        ],
+        correct: '284',
+    },
+    {
+        question: {
+            en: 'Which alphabet has 2 characters?',
+            ru: 'В какой азбуке 2 знака?',
+        },
+        answers: [
+            {
+                id: '286',
+                value: {
+                    en: 'in the alphabet of the Russian language',
+                    ru: 'в азбуке русского языка',
+                },
+            },
+            {
+                id: '287',
+                value: {
+                    en: 'Braille Alphabet',
+                    ru: 'В азбуке Брайля',
+                },
+            },
+            {
+                id: '288',
+                value: {
+                    en: 'In Morse code',
+                    ru: 'В азбуке Морзе',
+                },
+            }
+        ],
+        correct: '288',
+    },
+    {
+        question: {
+            en: 'What will always be equal to the product of all digits?',
+            ru: 'Чему всегда будет равно произведение всех цифр?',
+        },
+        answers: [
+            {
+                id: '289',
+                value: {
+                    en: '362880',
+                    ru: '362880',
+                },
+            },
+            {
+                id: '290',
+                value: {
+                    en: '0',
+                    ru: '0',
+                },
+            },
+            {
+                id: '291',
+                value: {
+                    en: 'infinity',
+                    ru: 'бесконечность',
+                },
+            }
+        ],
+        correct: '290',
+    },
+    {
+        question: {
+            en: 'How to calculate the perimeter?',
+            ru: 'Как посчитать периметр?',
+        },
+        answers: [
+            {
+                id: '292',
+                value: {
+                    en: 'Add the length of all sides',
+                    ru: 'Сложить длину всех сторон',
+                },
+            },
+            {
+                id: '293',
+                value: {
+                    en: 'Call the parents',
+                    ru: 'Позвать родителей',
+                },
+            },
+            {
+                id: '294',
+                value: {
+                    en: 'Take a long look at the task',
+                    ru: 'Долго смотреть на задачу',
+                },
+            }
+        ],
+        correct: '292',
+    },
+    {
+        question: {
+            en: 'What does not change when the order of terms is changed?',
+            ru: 'Что не меняется от перемены мест слагаемых?',
+        },
+        answers: [
+            {
+                id: '295',
+                value: {
+                    en: 'sum',
+                    ru: 'Сумма',
+                },
+            },
+            {
+                id: '296',
+                value: {
+                    en: 'subtraction',
+                    ru: 'вычитание',
+                },
+            },
+            {
+                id: '297',
+                value: {
+                    en: 'division',
+                    ru: 'деление',
+                },
+            }
+        ],
+        correct: '295',
+    },
     {
         question: {
             en: 'How many times a year does the sun rise?',
@@ -1752,8 +2472,8 @@ const mathematics = [
     },
     {
         question: {
-            en: 'What is the name of the science of numbers, their properties and actions on them?',
-            ru: 'Как называется наука о числах, их свойствах и действиях над ними?',
+            en: 'What is the science of numbers called?',
+            ru: 'Как называется наука о числах?',
         },
         answers: [
             {
@@ -2263,6 +2983,186 @@ const nature = [
         ],
         correct: '223',
     },
+    {
+        question: {
+            en: 'How fast does it take to drive so as not to hear the ringing of the jar tied to the rear bumper?',
+            ru: 'Скорость перемещения, при которой не слышен стук консервной банки, привязанной к заднему бамперу?',
+        },
+        answers: [
+            {
+                id: '298',
+                value: {
+                    en: '0',
+                    ru: '0',
+                },
+            },
+            {
+                id: '299',
+                value: {
+                    en: 'supersonic speed',
+                    ru: 'со сверхзвуковой скоростью',
+                },
+            },
+            {
+                id: '300',
+                value: {
+                    en: 'all of the above',
+                    ru: 'все вышеперечисленное',
+                },
+            }
+        ],
+        correct: '300',
+    },
+    {
+        question: {
+            en: 'The name of the fairy-tale heroine associated with the solid state of water?',
+            ru: 'Имя сказочной героини, связанное с твердым состоянием воды?',
+        },
+        answers: [
+            {
+                id: '301',
+                value: {
+                    en: 'water',
+                    ru: 'вода',
+                },
+            },
+            {
+                id: '302',
+                value: {
+                    en: 'Snow maiden',
+                    ru: 'Снегурочка',
+                },
+            },
+            {
+                id: '303',
+                value: {
+                    en: 'The Little Mermaid',
+                    ru: 'Русалочка',
+                },
+            }
+        ],
+        correct: '302',
+    },
+    {
+        question: {
+            en: 'What berries can be harvested in winter from under the snow?',
+            ru: 'Какие ягоды можно собрать зимой из-под снега?',
+        },
+        answers: [
+            {
+                id: '304',
+                value: {
+                    en: 'Cranberry',
+                    ru: 'Клюква',
+                },
+            },
+            {
+                id: '305',
+                value: {
+                    en: 'Blackberry',
+                    ru: 'Ежевика',
+                },
+            },
+            {
+                id: '306',
+                value: {
+                    en: 'Blueberry',
+                    ru: 'Голубика',
+                },
+            }
+        ],
+        correct: '304',
+    },
+    {
+        question: {
+            en: 'What is the name of the berry, which in dried form is called raisins?',
+            ru: 'Название ягоды, которая в сушеном виде называется изюм?',
+        },
+        answers: [
+            {
+                id: '307',
+                value: {
+                    en: 'cherry',
+                    ru: 'вишня',
+                },
+            },
+            {
+                id: '308',
+                value: {
+                    en: 'Apricot',
+                    ru: 'Абрикос',
+                },
+            },
+            {
+                id: '309',
+                value: {
+                    en: 'Grape',
+                    ru: 'Виноград',
+                },
+            }
+        ],
+        correct: '309',
+    },
+    {
+        question: {
+            en: 'The name of the scientist that is added to the temperature?',
+            ru: 'Фамилия ученого, которая добавляется к температуре?',
+        },
+        answers: [
+            {
+                id: '310',
+                value: {
+                    en: 'Fahrenheit',
+                    ru: 'Фаренгейт',
+                },
+            },
+            {
+                id: '311',
+                value: {
+                    en: 'Celsius',
+                    ru: 'Цельсий',
+                },
+            },
+            {
+                id: '312',
+                value: {
+                    en: 'All of the above',
+                    ru: 'Все перечисленное',
+                },
+            }
+        ],
+        correct: '312',
+    },
+    {
+        question: {
+            en: 'What is the name of the phenomenon when the sun sets?',
+            ru: 'Как называется явление, когда солнце заходит?',
+        },
+        answers: [
+            {
+                id: '313',
+                value: {
+                    en: 'Sunset',
+                    ru: 'Закат',
+                },
+            },
+            {
+                id: '314',
+                value: {
+                    en: 'Dawn',
+                    ru: 'Заря',
+                },
+            },
+            {
+                id: '315',
+                value: {
+                    en: 'Sunrise',
+                    ru: 'Рассвет',
+                },
+            }
+        ],
+        correct: '313',
+    },
 ]
 
 const data: TDb = {
@@ -2274,7 +3174,6 @@ const data: TDb = {
                 ru: 'Про\&nbspживотных',
             },
             tasks: animal,
-            bgSrc: './assets/images/img8.jpg',
         },
         tales: {
             id: 'tales',
@@ -2283,7 +3182,6 @@ const data: TDb = {
                 ru: 'Сказки',
             },
             tasks: tales,
-            bgSrc: './assets/images/img2.jpg',
         },
         cartoons: {
             id: 'cartoons',
@@ -2292,7 +3190,6 @@ const data: TDb = {
                 ru: 'Мультфильмы',
             },
             tasks: cartoons,
-            bgSrc: './assets/images/img6.jpg',
         },
         mathematics: {
             id: 'mathematics',
@@ -2301,7 +3198,6 @@ const data: TDb = {
                 ru: 'Математика',
             },
             tasks: mathematics,
-            bgSrc: './assets/images/img10.jpg',
         },
         nature: {
             id: 'nature',
@@ -2310,7 +3206,6 @@ const data: TDb = {
                 ru: 'Природа',
             },
             tasks: nature,
-            bgSrc: './assets/images/img15.jpg',
         },
     },
 }

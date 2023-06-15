@@ -35,7 +35,6 @@ export type TQuiz = {
         ru: string,
     },
     tasks: TTask[],
-    bgSrc: string,
 }
 
 export type TQuizId = 'animal' | 'tales' | 'cartoons' | 'mathematics' | 'nature';

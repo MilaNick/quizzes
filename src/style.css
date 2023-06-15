@@ -9,24 +9,23 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    margin: 0;
-    padding: 0;
     font-family: sans-serif;
     background: #f0dec6;
     font-size: 10px;
     overflow: hidden;
 }
 
-h2 {
+p {
     color: #009d8d;
     text-transform: uppercase;
-    font-size: 1.5rem;
 }
 
 .container {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+    padding: 10px;
     top: 0;
     left: 0;
     z-index: 2;
@@ -35,16 +34,16 @@ h2 {
 
 #container {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
     top: 0;
     left: 0;
     z-index: 1;
+    pointer-events: auto;
 }
 
 .caption-wrap {
-    height: 15vh;
-    padding: 2rem 2rem 0 2rem;
+    height: 10%;
 }
 
 .caption, .logo {
@@ -55,15 +54,22 @@ h2 {
 
 .meta-wrap {
     display: flex;
-    justify-content: space-between;
-    width: 60%;
-    height: 10vh;
-    margin: 0 auto;
-    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    --meta-height: 8vh;
+    height: var(--meta-height);
+    margin-top: 3%;
 }
 
 .logo-wrap {
     width: 10%;
+    height: 100%;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
 }
 
 .meta {
@@ -73,17 +79,28 @@ h2 {
     width: 70%;
 }
 
-.select-wrap {
-    width: 10%;
+.desc, .total-count {
+    margin-block: 0;
+    font-size: calc(var(--meta-height) / 3);
 }
 
-#lang {
+.select-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+
+.lang {
     display: block;
-    font-size: 1em;
-    padding: 1.2em;
+    box-sizing: border-box;
+    height: 95%;
+    padding: 0 10px;
     background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
+    font-size: calc(var(--meta-height) / 3) !important;
+    font-weight: bold;
+    text-align: center;
     text-transform: uppercase;
     color: #fe7a00;
     -o-appearance: none !important;
@@ -99,6 +116,10 @@ h2 {
     cursor: pointer;
 }
 
+.option {
+    font-size: calc(var(--meta-height) / 3) !important;
+}
+
 select::-ms-expand {
     display: none;
 }
@@ -109,11 +130,11 @@ select::-ms-expand {
     align-items: center;
     justify-content: space-around;
     gap: 1vh;
-    --menu-height: 65vh;
+    --menu-height: 70vh;
     width: 60%;
     height: var(--menu-height);
-    margin: 0 auto;
-    padding: 1rem;
+    margin-top: 1vh;
+    padding: 0 0 1vh;
 }
 
 /*===========buttons===========*/
@@ -152,7 +173,11 @@ select::-ms-expand {
 .btn-next {
     display: block;
     width: 60%;
-    padding: 1.5rem 4.5rem;
+    --btn-next-height: 10vh;
+    height: var(--btn-next-height);
+    margin-top: 2.5vh;
+    font-size: calc(var(--btn-next-height) * 0.35);
+    line-height: var(--btn-next-height);
     background-size: 200% auto;
     box-shadow: 0 0 2rem #eee;
     background-color: #00c3ff;
@@ -161,6 +186,15 @@ select::-ms-expand {
 
 .btn-next:hover {
     background-color: #02fee3;
+}
+
+.btn-home {
+    width: 60%;
+    --btn-home-height: 10vh;
+    height: var(--btn-home-height);
+    font-size: calc(var(--btn-home-height) * 0.35);
+    line-height: var(--btn-home-height);
+    pointer-events: auto;
 }
 
 .btn:disabled {
@@ -198,9 +232,8 @@ select::-ms-expand {
     align-items: center;
     flex-wrap: wrap;
     width: 60%;
-    --question-wrap-height: 20vh;
+    --question-wrap-height: 30vh;
     height: var(--question-wrap-height);
-    margin-top: 3rem;
     padding: 4px;
     background-color: rgb(254, 122, 0, 0.8);
     border-radius: 1rem;
@@ -216,13 +249,12 @@ select::-ms-expand {
 
 .question span {
     display: block;
-    margin-top: 1rem;
-    font-size: calc(((var(--question-wrap-height) - 2rem) / 2) * 0.3);
+    font-size: calc((var(--question-wrap-height) / 2) * 0.3);
 }
 
 .greyProgress {
     width: 59%;
-    margin-top: 1rem;
+    margin-top: 2vh;
     background-color: #d9c2a7;
     border-radius: 1.5rem;
 }
@@ -232,7 +264,7 @@ select::-ms-expand {
     border-radius: 1.5rem 0 0 1.5rem;
     text-align: center;
     font-size: 0.7rem;
-    line-height: 1rem;
+    line-height: 0.7rem;
     color: white;
 }
 
@@ -241,10 +273,10 @@ select::-ms-expand {
     flex-direction: column;
     justify-content: space-around;
     width: 60%;
-    --answers-wrap-height: 40vh;
+    --answers-wrap-height: 45vh;
     height: var(--answers-wrap-height);
     gap: 2vh;
-    padding: 1rem 0 1.5rem;
+    margin-top: 2vh;
 }
 
 .answers-wrap .btn {
@@ -252,22 +284,16 @@ select::-ms-expand {
     font-size: calc(((var(--answers-wrap-height) - 6vh) / 3) * 0.25);
 }
 
-.btn-next {
-    height: 11vh;
-    font-size: 4vh;
-}
-
 .output-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 60%;
     --output-wrap-height: 50vh;
     height: var(--output-wrap-height);
-    margin-top: 2rem;
     background-color: rgba(254, 122, 0, 0.8);
-    font-size: calc(((var(--output-wrap-height) - 5rem) / 5) * 0.4);
+    font-size: calc((var(--output-wrap-height) / 5) * 0.5);
     border-radius: 1rem;
     box-shadow: 0 0 2rem #eee;
 }
@@ -277,11 +303,12 @@ select::-ms-expand {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    --output-height: 30vh;
     width: 60%;
-    height: 25vh;
-    margin-top: 1rem;
+    height: var(--output-height);
+    padding: 15px 10px;
     background-color: transparent;
-    font-size: 1.3rem;
+    font-size: calc((var(--output-height) / 4) * 0.4);
     border-radius: 1rem;
     box-shadow: 0 0 2rem #eee;
 }
@@ -294,10 +321,8 @@ select::-ms-expand {
     border-right: solid 3px #fe7a00;
     white-space: nowrap;
     overflow: hidden;
-    /*font-family: 'Source Code Pro', monospace;*/
-    /*font-size: 28px;*/
-    /*color: rgba(255,255,255,.70);*/
 }
+
 /* Animation */
 .output span:nth-child(1)  {
     animation: animated-text 4s steps(29,end) 1s 1 normal both,
@@ -321,18 +346,29 @@ select::-ms-expand {
     from{border-right-color: rgba(254, 122, 0, 0.75);}
     to{border-right-color: transparent;}
 }
-.text-result {
-    margin-top: 1rem;
+
+@media (max-width: 992px) and (orientation: portrait) {
+    .meta-wrap,
+    .menu,
+    .question-wrap,
+    .answers-wrap,
+    .btn-next,
+    .output-wrap,
+    .output,
+    .btn-home {
+        width: 90%;
+    }
+    .greyProgress {
+        width: 88%;
+    }
+
+    .question span {
+        display: block;
+        font-size: calc((var(--question-wrap-height) / 2) * 0.2);
+    }
 }
 
-.btn-home {
-    width: 60%;
-    height: 8vh;
-    margin-top: 1rem;
-    font-size: 1.3rem;
-}
-
-@media (max-width: 767px) {
+@media (max-width: 767px){
     .meta-wrap,
     .menu,
     .question-wrap,
@@ -348,14 +384,16 @@ select::-ms-expand {
         width: 88%;
     }
 
-    h2 {
-        font-size: 1.3rem;
+    .desc, .total-count, .option {
+        font-size: calc(var(--meta-height) / 2);
     }
+
+    .option {
+        font-size: calc(var(--meta-height) / 2) !important;
+    }
+
+
 }
-
-/*@media (max-width: 1199px) {}*/
-
-/*@media (max-width: 991px) {}*/
 
 @media (max-width: 575px) {
     .meta-wrap,
@@ -369,17 +407,8 @@ select::-ms-expand {
         width: 98%;
     }
 
-    h2, .btn-home {
-        font-size: 0.7rem;
-    }
-
-    .btn {
-    calc(((var(--answers-wrap-height) - 6vh) / 3) * 0.25);
-    }
-
-    .question span {
-        margin-top: 0.5rem;
-        font-size: 0.9rem;
+    .logo-wrap {
+        width: 13%;
     }
 
     .greyProgress {
@@ -392,24 +421,39 @@ select::-ms-expand {
         line-height: 0.4rem;
     }
 
-    .btn-next {
-        margin-top: 1rem;
-        line-height: 0.2rem;
-    }
-}
-
-
-@media (max-width: 470px) {
-
-    h2, .btn-home {
-        font-size: 0.9rem;
+    .desc, .total-count, .option {
+        font-size: calc(var(--meta-height) / 3);
     }
 
-    .btn {
-    calc(((var(--answers-wrap-height) - 6vh) / 3) * 0.25);
+    .option {
+        font-size: calc(var(--meta-height)) !important;
+    }
+
+    .answers-wrap .btn {
+        font-size: calc(((var(--answers-wrap-height) - 6vh) / 3) * 0.2);
+    }
+    .output-wrap {
+        font-size: calc((var(--output-wrap-height) / 5) * 0.4);
     }
 
 }
+
+@media (max-width: 370px){
+    .desc, .total-count, .option {
+        font-size: calc(var(--meta-height) / 4);
+    }
+
+    .question span {
+        font-size: calc((var(--question-wrap-height) / 2) * 0.2);
+    }
+
+    .output-wrap {
+        font-size: calc((var(--output-wrap-height) / 5) * 0.3);
+    }
+
+}
+
+
 /*==========Animation==========*/
 .fade-in {
     animation: fadeIn ease 0.5s;

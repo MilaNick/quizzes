@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const select = document.createElement('select');
         select.setAttribute('id', 'lang');
         select.setAttribute('name', 'lang');
+        select.classList.add('lang')
         select.addEventListener('change', (e) => {
             e.preventDefault();
             // @ts-ignore
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const option = document.createElement('option');
             option.value = lang;
             option.text = lang;
+            option.classList.add('option')
             if (lang === state.lang) {
                 option.selected = true;
             }
@@ -59,16 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
         metaWrap.innerHTML = `
             <div class="logo-wrap"><img class="logo" src="./src/assets/images/logo.png" alt="logo"></div>
             <div class="meta">
-                <h2 class="desc">${texts.age[state.lang]}</h2>
-                <h2 class="total-count">${texts.total[state.lang]}${totalCorrectAnswerCount}</h2>
+                <p class="desc">${texts.age[state.lang]}</p>
+                <p class="total-count">${texts.total[state.lang]}${totalCorrectAnswerCount}</p>
             </div>
         `
         metaWrap.append(selectWrap)
-        section.innerHTML = `
-            <div class="caption-wrap">
-                <img class="caption" src="./src/assets/images/quiz.png" alt="quiz">
-            </div>
-        `;
+        const captionWrap = document.createElement('div');
+        captionWrap.classList.add('caption-wrap');
+        captionWrap.innerHTML = `<img class="caption" src=${state.lang === 'ru' ? "./src/assets/images/title_ru.png" :  "./src/assets/images/title_en.png"} alt="title">`
+        section.append(captionWrap);
         section.append(metaWrap);
         section.append(menuContainer);
     }
