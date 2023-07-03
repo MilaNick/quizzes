@@ -69,7 +69,7 @@ const animal = [
                 id: '232',
                 value: {
                     en: 'a Warbler',
-                    ru: 'Камышевка',
+                    ru: 'Камышовка',
                 },
             },
             {
@@ -83,7 +83,7 @@ const animal = [
                 id: '234',
                 value: {
                     en: 'a goldcrest',
-                    ru: 'королек',
+                    ru: 'королёк',
                 },
             }
         ],
@@ -189,7 +189,7 @@ const animal = [
                 id: '001',
                 value: {
                     en: 'He doesn\'t drink water',
-                    ru: 'Он не пьет воду',
+                    ru: 'Он не пьёт воду',
                 },
             },
             {
@@ -316,7 +316,7 @@ const animal = [
                 id: '014',
                 value: {
                     en: 'the Maine coon has no fur',
-                    ru: 'у мейн куна',
+                    ru: 'у мейн-куна',
                 },
             },
             {
@@ -663,8 +663,8 @@ const tales = [
     },
     {
         question: {
-            en: 'What was the name of the boy from the tree?',
-            ru: 'Как звали мальчика из дерева? ',
+            en: 'What was the name of the long-nosed boy made of wood?',
+            ru: 'Как звали длинноносого мальчика, сделанного из дерева?',
         },
         answers: [
             {
@@ -948,14 +948,14 @@ const tales = [
                 id: '059',
                 value: {
                     en: 'Theodore',
-                    ru: 'у Федора',
+                    ru: 'У Фёдора',
                 },
             },
             {
                 id: '060',
                 value: {
-                    en: 'Martin',
-                    ru: 'у Мартына',
+                    en: 'Michael',
+                    ru: 'у Михаила',
                 },
             }
         ],
@@ -963,28 +963,28 @@ const tales = [
     },
     {
         question: {
-            en: 'What does Baba Yaga fly in all the time?',
-            ru: 'В чём постоянно летает Баба-Яга?',
+            en: 'What does Baba Yaga fly on all the time?',
+            ru: 'На чём постоянно летает Баба-Яга?',
         },
         answers: [
             {
                 id: '061',
                 value: {
-                    en: 'a helicopter',
-                    ru: 'в вертолете',
+                    en: 'by helicopter',
+                    ru: 'на вертолете',
                 },
             },
             {
                 id: '062',
                 value: {
-                    en: 'a mortar',
+                    en: 'by mortar',
                     ru: 'в ступе',
                 },
             },
             {
                 id: '063',
                 value: {
-                    en: 'a ball',
+                    en: 'by ball',
                     ru: 'на шаре',
                 },
             }
@@ -1090,21 +1090,21 @@ const tales = [
             {
                 id: '073',
                 value: {
-                    en: 'a swift',
+                    en: 'the swift',
                     ru: 'Стрижа',
                 },
             },
             {
                 id: '074',
                 value: {
-                    en: 'a cuckoo',
+                    en: 'the cuckoo',
                     ru: 'Кукушку',
                 },
             },
             {
                 id: '075',
                 value: {
-                    en: 'a swallow',
+                    en: 'the swallow',
                     ru: 'Ласточку',
                 },
             }
@@ -1144,7 +1144,7 @@ const tales = [
     {
         question: {
             en: 'How many heroes were there?',
-            ru: 'Сколько было богатырей?',
+            ru: 'Сколько было богатырей на картине "Богатыри"?',
         },
         answers: [
             {
@@ -1203,8 +1203,8 @@ const tales = [
     },
     {
         question: {
-            en: 'Who ate rolls and rode on the stove?',
-            ru: 'Кто уплетал калачи и ехал на печи?',
+            en: 'Who rode on the stove and ate rolls?',
+            ru: 'Кто ехал на печи и уплетал калачи?',
         },
         answers: [
             {
@@ -1273,7 +1273,7 @@ const cartoons = [
                 id: '262',
                 value: {
                     en: 'the green frog',
-                    ru: 'зеленую лягушку',
+                    ru: 'зелёную лягушку',
                 },
             },
             {
@@ -1356,7 +1356,7 @@ const cartoons = [
     {
         question: {
             en: 'How should I eat a sandwich according to Matroskin?',
-            ru: 'Как надо есть будерброд по мнению Матроскина?',
+            ru: 'Как надо есть бутерброд по мнению Матроскина?',
         },
         answers: [
             {
@@ -1386,21 +1386,21 @@ const cartoons = [
     {
         question: {
             en: 'What is the name of the green giant living in the swamp?',
-            ru: 'Как зовут зеленого великана, живущего на болоте?',
+            ru: 'Как зовут зелёного великана, живущего на болоте?',
         },
         answers: [
             {
                 id: '274',
                 value: {
-                    en: 'Shrek',
-                    ru: 'Шрэк',
+                    en: 'Theodore',
+                    ru: 'Фёдор',
                 },
             },
             {
                 id: '275',
                 value: {
-                    en: 'Theodore',
-                    ru: 'Федор',
+                    en: 'Shrek',
+                    ru: 'Шрэк',
                 },
             },
             {
@@ -1411,7 +1411,7 @@ const cartoons = [
                 },
             }
         ],
-        correct: '274',
+        correct: '275',
     },
     {
         question: {
@@ -1506,7 +1506,7 @@ const cartoons = [
     {
         question: {
             en: 'Who was the smartest in Flower City?',
-            ru: 'Кто был самый умный в Цветочном городе?',
+            ru: 'Кто был умнее всех в Цветочном городе?',
         },
         answers: [
             {
@@ -1579,8 +1579,8 @@ const cartoons = [
             {
                 id: '104',
                 value: {
-                    en: 'Fedora',
-                    ru: 'Федора',
+                    en: 'Masha',
+                    ru: 'Маша',
                 },
             },
             {
@@ -1722,22 +1722,22 @@ const cartoons = [
             {
                 id: '118',
                 value: {
-                    en: 'Fixik',
+                    en: 'The fixik',
                     ru: 'Фиксик',
                 },
             },
             {
                 id: '119',
                 value: {
-                    en: 'Lunokhod',
+                    en: 'The moonwalker',
                     ru: 'Луноход',
                 },
             },
             {
                 id: '120',
                 value: {
-                    en: 'The Adventures of Luntik',
-                    ru: 'Приключения Лунтика',
+                    en: 'Moonzy and his friends',
+                    ru: 'Лунтик и его друзья',
                 },
             }
         ],
@@ -1835,8 +1835,8 @@ const cartoons = [
     },
     {
         question: {
-            en: 'The number of monkeys equal to the length of the boa constrictor?',
-            ru: 'Какое количество мартышек равно длине удава?',
+            en: 'How many monkeys are required to measure the length of a boa constrictor?',
+            ru: 'Какое количество мартышек требуется для измерения длины удава?',
         },
         answers: [
             {
@@ -1905,21 +1905,21 @@ const mathematics = [
                 id: '280',
                 value: {
                     en: 'a circle',
-                    ru: 'круг',
+                    ru: 'у круга',
                 },
             },
             {
                 id: '281',
                 value: {
                     en: 'cylinder',
-                    ru: 'цилиндр',
+                    ru: 'у цилиндра',
                 },
             },
             {
                 id: '282',
                 value: {
                     en: 'cone',
-                    ru: 'конус',
+                    ru: 'у конуса',
                 },
             }
         ],
@@ -1927,8 +1927,8 @@ const mathematics = [
     },
     {
         question: {
-            en: 'The distance from the center of the circle to any on its circumference?',
-            ru: 'Расстояние от центра круга до любой на его окружности?',
+            en: 'The distance from the center of the circle to any point on its circumference?',
+            ru: 'Расстояние от центра круга до любой точки на его окружности?',
         },
         answers: [
             {
@@ -2025,7 +2025,7 @@ const mathematics = [
                 id: '292',
                 value: {
                     en: 'Add the length of all sides',
-                    ru: 'Сложить длину всех сторон',
+                    ru: 'Сложить длины всех сторон',
                 },
             },
             {
@@ -2078,7 +2078,7 @@ const mathematics = [
     {
         question: {
             en: 'How many times a year does the sun rise?',
-            ru: 'Сколько раз в году поднимается солнце?',
+            ru: 'Сколько раз в году восходит солнце?',
         },
         answers: [
             {
@@ -2091,8 +2091,8 @@ const mathematics = [
             {
                 id: '137',
                 value: {
-                    en: '365',
-                    ru: '365',
+                    en: '365 or 366',
+                    ru: '365 или 366',
                 },
             },
             {
@@ -2114,22 +2114,22 @@ const mathematics = [
             {
                 id: '139',
                 value: {
-                    en: 'Argument',
-                    ru: 'Аргумент',
+                    en: 'statement',
+                    ru: 'утверждение',
                 },
             },
             {
                 id: '140',
                 value: {
                     en: 'Axiom',
-                    ru: 'Аксиома',
+                    ru: 'Аксиому',
                 },
             },
             {
                 id: '141',
                 value: {
                     en: 'Theorem',
-                    ru: 'Теорема',
+                    ru: 'Теорему',
                 },
             }
         ],
@@ -2438,7 +2438,7 @@ const mathematics = [
     {
         question: {
             en: 'What is the largest negative integer? ',
-            ru: 'Какое наибольшее целое отрицательное число? ',
+            ru: 'Какое наибольшее целое отрицательное число?',
         },
         answers: [
             {
@@ -2537,21 +2537,21 @@ const nature = [
                 id: '181',
                 value: {
                     en: 'Electromagnetism',
-                    ru: 'Электромагнетизм',
+                    ru: 'Электромагнетизма',
                 },
             },
             {
                 id: '182',
                 value: {
                     en: 'Gravity',
-                    ru: 'Гравитация',
+                    ru: 'Гравитации',
                 },
             },
             {
                 id: '183',
                 value: {
                     en: 'Nuclear power',
-                    ru: 'Ядерная сила',
+                    ru: 'Ядерной силы',
                 },
             }
         ],
@@ -2664,14 +2664,14 @@ const nature = [
                 id: '194',
                 value: {
                     en: 'Maples',
-                    ru: 'Клены',
+                    ru: 'Клёны',
                 },
             },
             {
                 id: '195',
                 value: {
-                    en: 'walnuts',
-                    ru: 'грецкие орехи',
+                    en: 'linden trees',
+                    ru: 'липы',
                 },
             }
         ],
@@ -2739,8 +2739,8 @@ const nature = [
     },
     {
         question: {
-            en: 'What is the same color in winter and summer?',
-            ru: 'Что зимой, и летом одним цветом?',
+            en: 'Which tree is the same color in winter and summer?',
+            ru: 'Какое дерево зимой и летом одним цветом?',
         },
         answers: [
             {
@@ -2867,21 +2867,21 @@ const nature = [
                 id: '214',
                 value: {
                     en: 'maple',
-                    ru: 'клен',
+                    ru: 'клён',
                 },
             },
             {
                 id: '215',
                 value: {
                     en: 'birch',
-                    ru: 'береза',
+                    ru: 'березу',
                 },
             },
             {
                 id: '216',
                 value: {
                     en: 'willow',
-                    ru: 'ива',
+                    ru: 'иву',
                 },
             }
         ],
@@ -2890,7 +2890,7 @@ const nature = [
     {
         question: {
             en: 'What to expect if the birds are flying low?',
-            ru: 'Чего ждать, если птицы низко летают?',
+            ru: 'Чего ожидать, если птицы низко летают?',
         },
         answers: [
             {
@@ -2994,14 +2994,14 @@ const nature = [
                 id: '299',
                 value: {
                     en: 'supersonic speed',
-                    ru: 'со сверхзвуковой скоростью',
+                    ru: 'сверхзвуковая скорость',
                 },
             },
             {
                 id: '300',
                 value: {
                     en: 'all of the above',
-                    ru: 'все вышеперечисленное',
+                    ru: 'всё вышеперечисленное',
                 },
             }
         ],
@@ -3016,8 +3016,8 @@ const nature = [
             {
                 id: '301',
                 value: {
-                    en: 'water',
-                    ru: 'вода',
+                    en: 'Pocahontas',
+                    ru: 'Покахонтас',
                 },
             },
             {
@@ -3040,28 +3040,28 @@ const nature = [
     {
         question: {
             en: 'What berries can be harvested in winter from under the snow?',
-            ru: 'Какие ягоды можно собрать зимой из-под снега?',
+            ru: 'Какие ягоды можно собирать зимой из-под снега?',
         },
         answers: [
             {
                 id: '304',
                 value: {
                     en: 'Cranberry',
-                    ru: 'Клюква',
+                    ru: 'Клюкву',
                 },
             },
             {
                 id: '305',
                 value: {
                     en: 'Blackberry',
-                    ru: 'Ежевика',
+                    ru: 'Ежевику',
                 },
             },
             {
                 id: '306',
                 value: {
                     en: 'Blueberry',
-                    ru: 'Голубика',
+                    ru: 'Голубику',
                 },
             }
         ],
@@ -3121,7 +3121,7 @@ const nature = [
                 id: '312',
                 value: {
                     en: 'All of the above',
-                    ru: 'Все перечисленное',
+                    ru: 'Все перечисленные',
                 },
             }
         ],
@@ -3204,8 +3204,8 @@ const data = {
 };
 export const texts = {
     age: {
-        en: 'from 6 to 12 years old',
-        ru: 'с 6 до 12 лет',
+        en: 'from 6 years old',
+        ru: 'с 6 лет',
     },
     total: {
         en: 'total points: ',
