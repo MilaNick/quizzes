@@ -8,6 +8,10 @@ const state = {
     totalCorrectAnswerCount: Number(localStorage.getItem('totalCorrect')),
     lang: 'ru',
 };
+window.addEventListener('scroll', function (event) {
+    window.scrollTo(0, 0);
+    event.preventDefault();
+}, false);
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector('.container');
     // const objectKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>;

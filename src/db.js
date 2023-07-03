@@ -753,8 +753,8 @@ const tales = [
     },
     {
         question: {
-            en: 'What did Little Red Riding Hood bring to her grandmother?',
-            ru: 'Что несла Красная Шапочка своей бабушке?',
+            en: 'What did Little Red Riding Hood bring to Grandma?',
+            ru: 'Что несла Красная Шапочка бабушке?',
         },
         answers: [
             {
@@ -993,7 +993,7 @@ const tales = [
     },
     {
         question: {
-            en: 'In what fairy tale did the evil stepmother bake pancakes for the wake?',
+            en: 'In which fairy tale did the stepmother bake pancakes for the wake?',
             ru: 'В какой сказке злая мачеха на поминки блины пекла?',
         },
         answers: [
@@ -1475,8 +1475,8 @@ const cartoons = [
     },
     {
         question: {
-            en: 'What was the name of the washbasins of the chief and commander of the washcloths from Chukovsky\'s fairy tale?',
-            ru: 'Как звали умывальников начальника и командира мочалок из сказки Чуковского?',
+            en: 'What was the name of the commander of the washcloths?',
+            ru: 'Как звали командира мочалок из сказки?',
         },
         answers: [
             {
@@ -1835,7 +1835,7 @@ const cartoons = [
     },
     {
         question: {
-            en: 'What is the number of monkeys equal to the length of the boa constrictor?',
+            en: 'The number of monkeys equal to the length of the boa constrictor?',
             ru: 'Какое количество мартышек равно длине удава?',
         },
         answers: [
@@ -1927,8 +1927,8 @@ const mathematics = [
     },
     {
         question: {
-            en: 'What is the distance from the center of a circle to a point on its circumference called?',
-            ru: 'Как называют расстояние от центра круга до любой на его окружности?',
+            en: 'The distance from the center of the circle to any on its circumference?',
+            ru: 'Расстояние от центра круга до любой на его окружности?',
         },
         answers: [
             {
@@ -2467,8 +2467,8 @@ const mathematics = [
     },
     {
         question: {
-            en: 'What is the name of the science of numbers, their properties and actions on them?',
-            ru: 'Как называется наука о числах, их свойствах и действиях над ними?',
+            en: 'What is the science of numbers called?',
+            ru: 'Как называется наука о числах?',
         },
         answers: [
             {
@@ -2979,183 +2979,183 @@ const nature = [
     },
     {
         question: {
-            en: '',
-            ru: '',
+            en: 'How fast does it take to drive so as not to hear the ringing of the jar tied to the rear bumper?',
+            ru: 'Скорость перемещения, при которой не слышен стук консервной банки, привязанной к заднему бамперу?',
         },
         answers: [
             {
                 id: '298',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: '0',
+                    ru: '0',
                 },
             },
             {
                 id: '299',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'supersonic speed',
+                    ru: 'со сверхзвуковой скоростью',
                 },
             },
             {
                 id: '300',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'all of the above',
+                    ru: 'все вышеперечисленное',
                 },
             }
         ],
-        correct: '',
+        correct: '300',
     },
     {
         question: {
-            en: '',
-            ru: '',
+            en: 'The name of the fairy-tale heroine associated with the solid state of water?',
+            ru: 'Имя сказочной героини, связанное с твердым состоянием воды?',
         },
         answers: [
             {
                 id: '301',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'water',
+                    ru: 'вода',
                 },
             },
             {
                 id: '302',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Snow maiden',
+                    ru: 'Снегурочка',
                 },
             },
             {
                 id: '303',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'The Little Mermaid',
+                    ru: 'Русалочка',
                 },
             }
         ],
-        correct: '',
+        correct: '302',
     },
     {
         question: {
-            en: '',
-            ru: '',
+            en: 'What berries can be harvested in winter from under the snow?',
+            ru: 'Какие ягоды можно собрать зимой из-под снега?',
         },
         answers: [
             {
                 id: '304',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Cranberry',
+                    ru: 'Клюква',
                 },
             },
             {
                 id: '305',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Blackberry',
+                    ru: 'Ежевика',
                 },
             },
             {
                 id: '306',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Blueberry',
+                    ru: 'Голубика',
                 },
             }
         ],
-        correct: '',
+        correct: '304',
     },
     {
         question: {
-            en: '',
-            ru: '',
+            en: 'What is the name of the berry, which in dried form is called raisins?',
+            ru: 'Название ягоды, которая в сушеном виде называется изюм?',
         },
         answers: [
             {
                 id: '307',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'cherry',
+                    ru: 'вишня',
                 },
             },
             {
                 id: '308',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Apricot',
+                    ru: 'Абрикос',
                 },
             },
             {
                 id: '309',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Grape',
+                    ru: 'Виноград',
                 },
             }
         ],
-        correct: '',
+        correct: '309',
     },
     {
         question: {
-            en: '',
-            ru: '',
+            en: 'The name of the scientist that is added to the temperature?',
+            ru: 'Фамилия ученого, которая добавляется к температуре?',
         },
         answers: [
             {
                 id: '310',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Fahrenheit',
+                    ru: 'Фаренгейт',
                 },
             },
             {
                 id: '311',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Celsius',
+                    ru: 'Цельсий',
                 },
             },
             {
                 id: '312',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'All of the above',
+                    ru: 'Все перечисленное',
                 },
             }
         ],
-        correct: '',
+        correct: '312',
     },
     {
         question: {
-            en: '',
-            ru: '',
+            en: 'What is the name of the phenomenon when the sun sets?',
+            ru: 'Как называется явление, когда солнце заходит?',
         },
         answers: [
             {
                 id: '313',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Sunset',
+                    ru: 'Закат',
                 },
             },
             {
                 id: '314',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Dawn',
+                    ru: 'Заря',
                 },
             },
             {
                 id: '315',
                 value: {
-                    en: '',
-                    ru: '',
+                    en: 'Sunrise',
+                    ru: 'Рассвет',
                 },
             }
         ],
-        correct: '',
+        correct: '313',
     },
 ];
 const data = {
@@ -3167,7 +3167,6 @@ const data = {
                 ru: 'Про\&nbspживотных',
             },
             tasks: animal,
-            bgSrc: './assets/images/img8.jpg',
         },
         tales: {
             id: 'tales',
@@ -3176,7 +3175,6 @@ const data = {
                 ru: 'Сказки',
             },
             tasks: tales,
-            bgSrc: './assets/images/img2.jpg',
         },
         cartoons: {
             id: 'cartoons',
@@ -3185,7 +3183,6 @@ const data = {
                 ru: 'Мультфильмы',
             },
             tasks: cartoons,
-            bgSrc: './assets/images/img6.jpg',
         },
         mathematics: {
             id: 'mathematics',
@@ -3194,7 +3191,6 @@ const data = {
                 ru: 'Математика',
             },
             tasks: mathematics,
-            bgSrc: './assets/images/img10.jpg',
         },
         nature: {
             id: 'nature',
@@ -3203,7 +3199,6 @@ const data = {
                 ru: 'Природа',
             },
             tasks: nature,
-            bgSrc: './assets/images/img15.jpg',
         },
     },
 };
